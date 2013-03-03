@@ -20,6 +20,30 @@
 		A3E9DD7216E28D2600F5E3CF /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD7016E28D2600F5E3CF /* iPad.storyboard */; };
 		A3E9DD7516E28D2600F5E3CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DD7416E28D2600F5E3CF /* ViewController.m */; };
 		A3E9DD7D16E2916E00F5E3CF /* iPhone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD7B16E2916E00F5E3CF /* iPhone4.storyboard */; };
+		A3E9DD8216E2ABBB00F5E3CF /* welcome-ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD8116E2ABBB00F5E3CF /* welcome-ipad.jpg */; };
+		A3E9DD8816E2BEF700F5E3CF /* support.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DD8716E2BEF700F5E3CF /* support.m */; };
+		A3E9DD8B16E2BF1B00F5E3CF /* tictactoe_game.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DD8A16E2BF1B00F5E3CF /* tictactoe_game.m */; };
+		A3E9DD8D16E2BF8A00F5E3CF /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E9DD8C16E2BF8A00F5E3CF /* GameKit.framework */; };
+		A3E9DD8F16E2BF9C00F5E3CF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E9DD8E16E2BF9C00F5E3CF /* libsqlite3.dylib */; };
+		A3E9DD9916E2C08C00F5E3CF /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9316E2C08C00F5E3CF /* blank.png */; };
+		A3E9DD9A16E2C08C00F5E3CF /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9416E2C08C00F5E3CF /* o.png */; };
+		A3E9DD9B16E2C08C00F5E3CF /* o1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9516E2C08C00F5E3CF /* o1.png */; };
+		A3E9DD9C16E2C08C00F5E3CF /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9616E2C08C00F5E3CF /* x.png */; };
+		A3E9DD9D16E2C08C00F5E3CF /* x1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9716E2C08C00F5E3CF /* x1.png */; };
+		A3E9DDA016E2C0D900F5E3CF /* United-States-Flag-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9E16E2C0D900F5E3CF /* United-States-Flag-icon.png */; };
+		A3E9DDA116E2C0D900F5E3CF /* Canada-Flag-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9F16E2C0D900F5E3CF /* Canada-Flag-icon.png */; };
+		A3E9DDB016E2C14100F5E3CF /* Female.ico in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDAE16E2C14100F5E3CF /* Female.ico */; };
+		A3E9DDB116E2C14100F5E3CF /* Male.ico in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDAF16E2C14100F5E3CF /* Male.ico */; };
+		A3E9DDB316E2C17000F5E3CF /* tic-tac-toe.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDB216E2C17000F5E3CF /* tic-tac-toe.png */; };
+		A3E9DDB416E2C1AE00F5E3CF /* brandnames.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DD9016E2BFD800F5E3CF /* brandnames.sqlite */; };
+		A3E9DDB716E2C20900F5E3CF /* popularnames.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDB616E2C20900F5E3CF /* popularnames.m */; };
+		A3E9DDBA16E2C2C400F5E3CF /* names.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDB916E2C2C400F5E3CF /* names.m */; };
+		A3E9DDC016E2CA8D00F5E3CF /* search.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDBF16E2CA8D00F5E3CF /* search.m */; };
+		A3E9DDC216E2CD9900F5E3CF /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDC116E2CD9900F5E3CF /* background1.jpg */; };
+		A3E9DDC616E2D2B800F5E3CF /* support.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDC516E2D2B800F5E3CF /* support.png */; };
+		A3E9DDC816E2D98400F5E3CF /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDC716E2D98400F5E3CF /* favorites.png */; };
+		A3E9DDCA16E2DA3200F5E3CF /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDC916E2DA3200F5E3CF /* search.png */; };
+		A3E9DDCC16E2DB7300F5E3CF /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDCB16E2DB7300F5E3CF /* chart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +66,50 @@
 		A3E9DD7416E28D2600F5E3CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A3E9DD7C16E2916E00F5E3CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone4.storyboard; sourceTree = "<group>"; };
 		A3E9DD7F16E2928200F5E3CF /* Baby Brands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Baby Brands.entitlements"; sourceTree = "<group>"; };
+		A3E9DD8116E2ABBB00F5E3CF /* welcome-ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "welcome-ipad.jpg"; sourceTree = "<group>"; };
+		A3E9DD8616E2BEF700F5E3CF /* support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = support.h; sourceTree = "<group>"; };
+		A3E9DD8716E2BEF700F5E3CF /* support.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = support.m; sourceTree = "<group>"; };
+		A3E9DD8916E2BF1B00F5E3CF /* tictactoe_game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_game.h; sourceTree = "<group>"; };
+		A3E9DD8A16E2BF1B00F5E3CF /* tictactoe_game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tictactoe_game.m; sourceTree = "<group>"; };
+		A3E9DD8C16E2BF8A00F5E3CF /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		A3E9DD8E16E2BF9C00F5E3CF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A3E9DD9016E2BFD800F5E3CF /* brandnames.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = brandnames.sqlite; sourceTree = "<group>"; };
+		A3E9DD9316E2C08C00F5E3CF /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank.png; sourceTree = "<group>"; };
+		A3E9DD9416E2C08C00F5E3CF /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o.png; sourceTree = "<group>"; };
+		A3E9DD9516E2C08C00F5E3CF /* o1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o1.png; sourceTree = "<group>"; };
+		A3E9DD9616E2C08C00F5E3CF /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		A3E9DD9716E2C08C00F5E3CF /* x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x1.png; sourceTree = "<group>"; };
+		A3E9DD9E16E2C0D900F5E3CF /* United-States-Flag-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United-States-Flag-icon.png"; sourceTree = "<group>"; };
+		A3E9DD9F16E2C0D900F5E3CF /* Canada-Flag-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Canada-Flag-icon.png"; sourceTree = "<group>"; };
+		A3E9DDA316E2C10900F5E3CF /* FMDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A3E9DDA416E2C10900F5E3CF /* FMDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A3E9DDA516E2C10900F5E3CF /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A3E9DDA616E2C10900F5E3CF /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A3E9DDA716E2C10900F5E3CF /* FMDatabasePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A3E9DDA816E2C10900F5E3CF /* FMDatabasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A3E9DDA916E2C10900F5E3CF /* FMDatabaseQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A3E9DDAA16E2C10900F5E3CF /* FMDatabaseQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A3E9DDAB16E2C10900F5E3CF /* fmdb_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmdb_Prefix.pch; sourceTree = "<group>"; };
+		A3E9DDAC16E2C10900F5E3CF /* FMResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A3E9DDAD16E2C10900F5E3CF /* FMResultSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A3E9DDAE16E2C14100F5E3CF /* Female.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = Female.ico; sourceTree = "<group>"; };
+		A3E9DDAF16E2C14100F5E3CF /* Male.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = Male.ico; sourceTree = "<group>"; };
+		A3E9DDB216E2C17000F5E3CF /* tic-tac-toe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tic-tac-toe.png"; sourceTree = "<group>"; };
+		A3E9DDB516E2C20900F5E3CF /* popularnames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = popularnames.h; path = ../popularnames.h; sourceTree = "<group>"; };
+		A3E9DDB616E2C20900F5E3CF /* popularnames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = popularnames.m; path = ../popularnames.m; sourceTree = "<group>"; };
+		A3E9DDB816E2C2C400F5E3CF /* names.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = names.h; sourceTree = "<group>"; };
+		A3E9DDB916E2C2C400F5E3CF /* names.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = names.m; sourceTree = "<group>"; };
+		A3E9DDBE16E2CA8D00F5E3CF /* search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = search.h; path = ../search.h; sourceTree = "<group>"; };
+		A3E9DDBF16E2CA8D00F5E3CF /* search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = search.m; path = ../search.m; sourceTree = "<group>"; };
+		A3E9DDC116E2CD9900F5E3CF /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		A3E9DDC316E2D16100F5E3CF /* DTCustomColoredAccessory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTCustomColoredAccessory.h; sourceTree = "<group>"; };
+		A3E9DDC416E2D16100F5E3CF /* DTCustomColoredAccessory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTCustomColoredAccessory.m; sourceTree = "<group>"; };
+		A3E9DDC516E2D2B800F5E3CF /* support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = support.png; sourceTree = "<group>"; };
+		A3E9DDC716E2D98400F5E3CF /* favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorites.png; sourceTree = "<group>"; };
+		A3E9DDC916E2DA3200F5E3CF /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		A3E9DDCB16E2DB7300F5E3CF /* chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart.png; sourceTree = "<group>"; };
+		A3E9DDCD16E2F03500F5E3CF /* TicTacToe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToe.m; sourceTree = "<group>"; };
+		A3E9DDCE16E2F03500F5E3CF /* TicTacToe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E9DD8F16E2BF9C00F5E3CF /* libsqlite3.dylib in Frameworks */,
+				A3E9DD8D16E2BF8A00F5E3CF /* GameKit.framework in Frameworks */,
 				A3E9DD5616E28D2600F5E3CF /* UIKit.framework in Frameworks */,
 				A3E9DD5816E28D2600F5E3CF /* Foundation.framework in Frameworks */,
 				A3E9DD5A16E28D2600F5E3CF /* CoreGraphics.framework in Frameworks */,
@@ -61,7 +131,6 @@
 		A3E9DD4916E28D2600F5E3CF = {
 			isa = PBXGroup;
 			children = (
-				A3E9DD7E16E2923900F5E3CF /* graphics */,
 				A3E9DD5B16E28D2600F5E3CF /* Baby Brands */,
 				A3E9DD5416E28D2600F5E3CF /* Frameworks */,
 				A3E9DD5316E28D2600F5E3CF /* Products */,
@@ -79,6 +148,8 @@
 		A3E9DD5416E28D2600F5E3CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3E9DD8E16E2BF9C00F5E3CF /* libsqlite3.dylib */,
+				A3E9DD8C16E2BF8A00F5E3CF /* GameKit.framework */,
 				A3E9DD5516E28D2600F5E3CF /* UIKit.framework */,
 				A3E9DD5716E28D2600F5E3CF /* Foundation.framework */,
 				A3E9DD5916E28D2600F5E3CF /* CoreGraphics.framework */,
@@ -89,6 +160,20 @@
 		A3E9DD5B16E28D2600F5E3CF /* Baby Brands */ = {
 			isa = PBXGroup;
 			children = (
+				A3E9DDCD16E2F03500F5E3CF /* TicTacToe.m */,
+				A3E9DDCE16E2F03500F5E3CF /* TicTacToe.h */,
+				A3E9DDC316E2D16100F5E3CF /* DTCustomColoredAccessory.h */,
+				A3E9DDC416E2D16100F5E3CF /* DTCustomColoredAccessory.m */,
+				A3E9DDBE16E2CA8D00F5E3CF /* search.h */,
+				A3E9DDBF16E2CA8D00F5E3CF /* search.m */,
+				A3E9DDB816E2C2C400F5E3CF /* names.h */,
+				A3E9DDB916E2C2C400F5E3CF /* names.m */,
+				A3E9DDB616E2C20900F5E3CF /* popularnames.m */,
+				A3E9DDB516E2C20900F5E3CF /* popularnames.h */,
+				A3E9DD8616E2BEF700F5E3CF /* support.h */,
+				A3E9DD8716E2BEF700F5E3CF /* support.m */,
+				A3E9DD8916E2BF1B00F5E3CF /* tictactoe_game.h */,
+				A3E9DD8A16E2BF1B00F5E3CF /* tictactoe_game.m */,
 				A3E9DD7F16E2928200F5E3CF /* Baby Brands.entitlements */,
 				A3E9DD6416E28D2600F5E3CF /* AppDelegate.h */,
 				A3E9DD6516E28D2600F5E3CF /* AppDelegate.m */,
@@ -97,6 +182,7 @@
 				A3E9DD7016E28D2600F5E3CF /* iPad.storyboard */,
 				A3E9DD7316E28D2600F5E3CF /* ViewController.h */,
 				A3E9DD7416E28D2600F5E3CF /* ViewController.m */,
+				A3E9DD7E16E2923900F5E3CF /* graphics */,
 				A3E9DD5C16E28D2600F5E3CF /* Supporting Files */,
 			);
 			path = "Baby Brands";
@@ -105,6 +191,8 @@
 		A3E9DD5C16E28D2600F5E3CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3E9DDA216E2C0EE00F5E3CF /* fmdb */,
+				A3E9DD9016E2BFD800F5E3CF /* brandnames.sqlite */,
 				A3E9DD5D16E28D2600F5E3CF /* Baby Brands-Info.plist */,
 				A3E9DD5E16E28D2600F5E3CF /* InfoPlist.strings */,
 				A3E9DD6116E28D2600F5E3CF /* main.m */,
@@ -119,8 +207,52 @@
 		A3E9DD7E16E2923900F5E3CF /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				A3E9DDCB16E2DB7300F5E3CF /* chart.png */,
+				A3E9DDC916E2DA3200F5E3CF /* search.png */,
+				A3E9DDC716E2D98400F5E3CF /* favorites.png */,
+				A3E9DDC516E2D2B800F5E3CF /* support.png */,
+				A3E9DDC116E2CD9900F5E3CF /* background1.jpg */,
+				A3E9DDAE16E2C14100F5E3CF /* Female.ico */,
+				A3E9DDAF16E2C14100F5E3CF /* Male.ico */,
+				A3E9DD9E16E2C0D900F5E3CF /* United-States-Flag-icon.png */,
+				A3E9DD9F16E2C0D900F5E3CF /* Canada-Flag-icon.png */,
+				A3E9DD9116E2C08C00F5E3CF /* tictactoe */,
+				A3E9DD8116E2ABBB00F5E3CF /* welcome-ipad.jpg */,
 			);
 			name = graphics;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A3E9DD9116E2C08C00F5E3CF /* tictactoe */ = {
+			isa = PBXGroup;
+			children = (
+				A3E9DDB216E2C17000F5E3CF /* tic-tac-toe.png */,
+				A3E9DD9316E2C08C00F5E3CF /* blank.png */,
+				A3E9DD9416E2C08C00F5E3CF /* o.png */,
+				A3E9DD9516E2C08C00F5E3CF /* o1.png */,
+				A3E9DD9616E2C08C00F5E3CF /* x.png */,
+				A3E9DD9716E2C08C00F5E3CF /* x1.png */,
+			);
+			name = tictactoe;
+			path = images;
+			sourceTree = "<group>";
+		};
+		A3E9DDA216E2C0EE00F5E3CF /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A3E9DDA316E2C10900F5E3CF /* FMDatabase.h */,
+				A3E9DDA416E2C10900F5E3CF /* FMDatabase.m */,
+				A3E9DDA516E2C10900F5E3CF /* FMDatabaseAdditions.h */,
+				A3E9DDA616E2C10900F5E3CF /* FMDatabaseAdditions.m */,
+				A3E9DDA716E2C10900F5E3CF /* FMDatabasePool.h */,
+				A3E9DDA816E2C10900F5E3CF /* FMDatabasePool.m */,
+				A3E9DDA916E2C10900F5E3CF /* FMDatabaseQueue.h */,
+				A3E9DDAA16E2C10900F5E3CF /* FMDatabaseQueue.m */,
+				A3E9DDAB16E2C10900F5E3CF /* fmdb_Prefix.pch */,
+				A3E9DDAC16E2C10900F5E3CF /* FMResultSet.h */,
+				A3E9DDAD16E2C10900F5E3CF /* FMResultSet.m */,
+			);
+			name = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E9DDB416E2C1AE00F5E3CF /* brandnames.sqlite in Resources */,
 				A3E9DD6016E28D2600F5E3CF /* InfoPlist.strings in Resources */,
 				A3E9DD6816E28D2600F5E3CF /* Default.png in Resources */,
 				A3E9DD6A16E28D2600F5E3CF /* Default@2x.png in Resources */,
@@ -181,6 +314,22 @@
 				A3E9DD6F16E28D2600F5E3CF /* iPhone5.storyboard in Resources */,
 				A3E9DD7216E28D2600F5E3CF /* iPad.storyboard in Resources */,
 				A3E9DD7D16E2916E00F5E3CF /* iPhone4.storyboard in Resources */,
+				A3E9DD8216E2ABBB00F5E3CF /* welcome-ipad.jpg in Resources */,
+				A3E9DD9916E2C08C00F5E3CF /* blank.png in Resources */,
+				A3E9DD9A16E2C08C00F5E3CF /* o.png in Resources */,
+				A3E9DD9B16E2C08C00F5E3CF /* o1.png in Resources */,
+				A3E9DD9C16E2C08C00F5E3CF /* x.png in Resources */,
+				A3E9DD9D16E2C08C00F5E3CF /* x1.png in Resources */,
+				A3E9DDA016E2C0D900F5E3CF /* United-States-Flag-icon.png in Resources */,
+				A3E9DDA116E2C0D900F5E3CF /* Canada-Flag-icon.png in Resources */,
+				A3E9DDB016E2C14100F5E3CF /* Female.ico in Resources */,
+				A3E9DDB116E2C14100F5E3CF /* Male.ico in Resources */,
+				A3E9DDB316E2C17000F5E3CF /* tic-tac-toe.png in Resources */,
+				A3E9DDC216E2CD9900F5E3CF /* background1.jpg in Resources */,
+				A3E9DDC616E2D2B800F5E3CF /* support.png in Resources */,
+				A3E9DDC816E2D98400F5E3CF /* favorites.png in Resources */,
+				A3E9DDCA16E2DA3200F5E3CF /* search.png in Resources */,
+				A3E9DDCC16E2DB7300F5E3CF /* chart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +343,11 @@
 				A3E9DD6216E28D2600F5E3CF /* main.m in Sources */,
 				A3E9DD6616E28D2600F5E3CF /* AppDelegate.m in Sources */,
 				A3E9DD7516E28D2600F5E3CF /* ViewController.m in Sources */,
+				A3E9DD8816E2BEF700F5E3CF /* support.m in Sources */,
+				A3E9DD8B16E2BF1B00F5E3CF /* tictactoe_game.m in Sources */,
+				A3E9DDB716E2C20900F5E3CF /* popularnames.m in Sources */,
+				A3E9DDBA16E2C2C400F5E3CF /* names.m in Sources */,
+				A3E9DDC016E2CA8D00F5E3CF /* search.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
