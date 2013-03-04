@@ -7,7 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "TicTacToe.h"
+#import "GameKit/GameKit.h"
 
-@interface tictactoe_game : ViewController
+
+@interface tictactoe_game : ViewController 
+
+{
+@private
+    TicTacToe *ttt;
+}
 
 @end

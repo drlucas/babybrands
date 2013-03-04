@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GameKit/GameKit.h"
+
 
 @interface ViewController ()
 
@@ -18,18 +20,20 @@
 {
     [super viewDidLoad];
 	//fixup nav bar
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.8 green:0.4 blue:1.0 alpha:1];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.243 green:0.125 blue:0.345 alpha:1];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero] ;
     label.backgroundColor = [UIColor clearColor];
     label.font = [UIFont boldSystemFontOfSize:30.0];
-    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-   
-   // [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"background1.jpg"] forBarMetrics:UIBarMetricsDefault];
-    label.textColor = [UIColor blackColor];
-   // label.textColor = [UIColor whiteColor]; // change this color
+   // label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.1];
+    //label.textColor = [UIColor blackColor];
+   label.textColor = [UIColor whiteColor]; // change this color
     self.navigationItem.titleView = label;
     label.text = NSLocalizedString(@"Baby Brands", @"");
     [label sizeToFit];
+    
+    //start game center up
+    [self authenticateLocalPlayer];
 
 }
 
@@ -38,5 +42,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+//game center setup
+
+- (void) authenticateLocalPlayer
+{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    [localPlayer setAuthenticateHandler:(^(UIViewController* viewcontroller, NSError *error) {
+        if (!error && viewcontroller)
+        {
+           // [[support sharedDelegate].viewController
+            // presentViewController:viewcontroller animated:YES completion:nil];
+        }
+        else
+        {
+           //something bad happened
+        }
+    })];
+}
+
 
 @end

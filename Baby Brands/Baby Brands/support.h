@@ -7,7 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "GameKit/GameKit.h"
 
-@interface support : ViewController
+@interface support : ViewController <GKGameCenterControllerDelegate> {
+//@interface support : ViewController  {
+    
+}
 
 @end

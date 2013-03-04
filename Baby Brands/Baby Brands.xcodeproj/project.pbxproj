@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A379C43816E3B6CB005133EE /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A379C43716E3B6CB005133EE /* background2.jpg */; };
+		A379C43A16E3B882005133EE /* help_and_support.ico in Resources */ = {isa = PBXBuildFile; fileRef = A379C43916E3B882005133EE /* help_and_support.ico */; };
+		A379C43C16E3C156005133EE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379C43B16E3C156005133EE /* Settings.bundle */; };
+		A379C43D16E3D7F2005133EE /* TicTacToe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDCD16E2F03500F5E3CF /* TicTacToe.m */; };
+		A3B0CDB116E41AF5001EF5B4 /* gamecenter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3B0CDB016E41AF5001EF5B4 /* gamecenter.jpg */; };
+		A3B0CDB516E41F58001EF5B4 /* Podium.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B0CDB416E41F58001EF5B4 /* Podium.png */; };
+		A3B0CDC216E42F7F001EF5B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B0CDC116E42F7F001EF5B4 /* QuartzCore.framework */; };
 		A3E9DD5616E28D2600F5E3CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E9DD5516E28D2600F5E3CF /* UIKit.framework */; };
 		A3E9DD5816E28D2600F5E3CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E9DD5716E28D2600F5E3CF /* Foundation.framework */; };
 		A3E9DD5A16E28D2600F5E3CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E9DD5916E28D2600F5E3CF /* CoreGraphics.framework */; };
@@ -46,7 +53,24 @@
 		A3E9DDCC16E2DB7300F5E3CF /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDCB16E2DB7300F5E3CF /* chart.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A3B0CDC816E42FB9001EF5B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9B83470FB8A0A40035D8DA;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A379C43716E3B6CB005133EE /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
+		A379C43916E3B882005133EE /* help_and_support.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = help_and_support.ico; sourceTree = "<group>"; };
+		A379C43B16E3C156005133EE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		A3B0CDB016E41AF5001EF5B4 /* gamecenter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gamecenter.jpg; sourceTree = "<group>"; };
+		A3B0CDB416E41F58001EF5B4 /* Podium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Podium.png; sourceTree = "<group>"; };
+		A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "../../../CorePlot_1-1.1/Source/framework/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
+		A3B0CDC116E42F7F001EF5B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3E9DD5216E28D2600F5E3CF /* Baby Brands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Brands.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E9DD5516E28D2600F5E3CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3E9DD5716E28D2600F5E3CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B0CDC216E42F7F001EF5B4 /* QuartzCore.framework in Frameworks */,
 				A3E9DD8F16E2BF9C00F5E3CF /* libsqlite3.dylib in Frameworks */,
 				A3E9DD8D16E2BF8A00F5E3CF /* GameKit.framework in Frameworks */,
 				A3E9DD5616E28D2600F5E3CF /* UIKit.framework in Frameworks */,
@@ -128,9 +153,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3B0CDC316E42FB9001EF5B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3B0CDC916E42FB9001EF5B4 /* libCorePlot-CocoaTouch.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A3E9DD4916E28D2600F5E3CF = {
 			isa = PBXGroup;
 			children = (
+				A3B0CDC116E42F7F001EF5B4 /* QuartzCore.framework */,
 				A3E9DD5B16E28D2600F5E3CF /* Baby Brands */,
 				A3E9DD5416E28D2600F5E3CF /* Frameworks */,
 				A3E9DD5316E28D2600F5E3CF /* Products */,
@@ -148,6 +182,7 @@
 		A3E9DD5416E28D2600F5E3CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */,
 				A3E9DD8E16E2BF9C00F5E3CF /* libsqlite3.dylib */,
 				A3E9DD8C16E2BF8A00F5E3CF /* GameKit.framework */,
 				A3E9DD5516E28D2600F5E3CF /* UIKit.framework */,
@@ -191,6 +226,7 @@
 		A3E9DD5C16E28D2600F5E3CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A379C43B16E3C156005133EE /* Settings.bundle */,
 				A3E9DDA216E2C0EE00F5E3CF /* fmdb */,
 				A3E9DD9016E2BFD800F5E3CF /* brandnames.sqlite */,
 				A3E9DD5D16E28D2600F5E3CF /* Baby Brands-Info.plist */,
@@ -207,6 +243,10 @@
 		A3E9DD7E16E2923900F5E3CF /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				A3B0CDB416E41F58001EF5B4 /* Podium.png */,
+				A3B0CDB016E41AF5001EF5B4 /* gamecenter.jpg */,
+				A379C43916E3B882005133EE /* help_and_support.ico */,
+				A379C43716E3B6CB005133EE /* background2.jpg */,
 				A3E9DDCB16E2DB7300F5E3CF /* chart.png */,
 				A3E9DDC916E2DA3200F5E3CF /* search.png */,
 				A3E9DDC716E2D98400F5E3CF /* favorites.png */,
@@ -294,12 +334,28 @@
 			mainGroup = A3E9DD4916E28D2600F5E3CF;
 			productRefGroup = A3E9DD5316E28D2600F5E3CF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A3B0CDC316E42FB9001EF5B4 /* Products */;
+					ProjectRef = A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A3E9DD5116E28D2600F5E3CF /* Baby Brands */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A3B0CDC916E42FB9001EF5B4 /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = A3B0CDC816E42FB9001EF5B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A3E9DD5016E28D2600F5E3CF /* Resources */ = {
@@ -330,6 +386,11 @@
 				A3E9DDC816E2D98400F5E3CF /* favorites.png in Resources */,
 				A3E9DDCA16E2DA3200F5E3CF /* search.png in Resources */,
 				A3E9DDCC16E2DB7300F5E3CF /* chart.png in Resources */,
+				A379C43816E3B6CB005133EE /* background2.jpg in Resources */,
+				A379C43A16E3B882005133EE /* help_and_support.ico in Resources */,
+				A379C43C16E3C156005133EE /* Settings.bundle in Resources */,
+				A3B0CDB116E41AF5001EF5B4 /* gamecenter.jpg in Resources */,
+				A3B0CDB516E41F58001EF5B4 /* Podium.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A379C43D16E3D7F2005133EE /* TicTacToe.m in Sources */,
 				A3E9DD6216E28D2600F5E3CF /* main.m in Sources */,
 				A3E9DD6616E28D2600F5E3CF /* AppDelegate.m in Sources */,
 				A3E9DD7516E28D2600F5E3CF /* ViewController.m in Sources */,
@@ -494,6 +556,7 @@
 				A3E9DD7A16E28D2600F5E3CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,7 +12,10 @@
 
 @end
 
-@implementation search
+@implementation search {
+    
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
