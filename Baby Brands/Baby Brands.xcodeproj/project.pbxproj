@@ -51,6 +51,10 @@
 		A3E9DDC816E2D98400F5E3CF /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDC716E2D98400F5E3CF /* favorites.png */; };
 		A3E9DDCA16E2DA3200F5E3CF /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDC916E2DA3200F5E3CF /* search.png */; };
 		A3E9DDCC16E2DB7300F5E3CF /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E9DDCB16E2DB7300F5E3CF /* chart.png */; };
+		A3F3650916E5785800B6C0D5 /* graph.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F3650816E5785800B6C0D5 /* graph.m */; };
+		A3F3650A16E57C3700B6C0D5 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B0CDC916E42FB9001EF5B4 /* libCorePlot-CocoaTouch.a */; };
+		A3F3651916E82B7700B6C0D5 /* icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651816E82B7700B6C0D5 /* icon_2.png */; };
+		A3F3651B16E82B7A00B6C0D5 /* icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651A16E82B7A00B6C0D5 /* icon_1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,13 @@
 			containerPortal = A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC9B83470FB8A0A40035D8DA;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+		A3F3650B16E57C4800B6C0D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BC9B83460FB8A0A40035D8DA;
 			remoteInfo = "CorePlot-CocoaTouch";
 		};
 /* End PBXContainerItemProxy section */
@@ -89,7 +100,6 @@
 		A3E9DD7316E28D2600F5E3CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A3E9DD7416E28D2600F5E3CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A3E9DD7C16E2916E00F5E3CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone4.storyboard; sourceTree = "<group>"; };
-		A3E9DD7F16E2928200F5E3CF /* Baby Brands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Baby Brands.entitlements"; sourceTree = "<group>"; };
 		A3E9DD8116E2ABBB00F5E3CF /* welcome-ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "welcome-ipad.jpg"; sourceTree = "<group>"; };
 		A3E9DD8616E2BEF700F5E3CF /* support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = support.h; sourceTree = "<group>"; };
 		A3E9DD8716E2BEF700F5E3CF /* support.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = support.m; sourceTree = "<group>"; };
@@ -134,6 +144,11 @@
 		A3E9DDCB16E2DB7300F5E3CF /* chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart.png; sourceTree = "<group>"; };
 		A3E9DDCD16E2F03500F5E3CF /* TicTacToe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToe.m; sourceTree = "<group>"; };
 		A3E9DDCE16E2F03500F5E3CF /* TicTacToe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
+		A3F3650716E5785800B6C0D5 /* graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
+		A3F3650816E5785800B6C0D5 /* graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = graph.m; sourceTree = "<group>"; };
+		A3F3651816E82B7700B6C0D5 /* icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_2.png; sourceTree = "<group>"; };
+		A3F3651A16E82B7A00B6C0D5 /* icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_1.png; sourceTree = "<group>"; };
+		A3F3651C16E8307A00B6C0D5 /* Baby Brands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Baby Brands.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F3650A16E57C3700B6C0D5 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				A3B0CDC216E42F7F001EF5B4 /* QuartzCore.framework in Frameworks */,
 				A3E9DD8F16E2BF9C00F5E3CF /* libsqlite3.dylib in Frameworks */,
 				A3E9DD8D16E2BF8A00F5E3CF /* GameKit.framework in Frameworks */,
@@ -164,7 +180,9 @@
 		A3E9DD4916E28D2600F5E3CF = {
 			isa = PBXGroup;
 			children = (
-				A3B0CDC116E42F7F001EF5B4 /* QuartzCore.framework */,
+				A3F3651A16E82B7A00B6C0D5 /* icon_1.png */,
+				A3F3651816E82B7700B6C0D5 /* icon_2.png */,
+				A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */,
 				A3E9DD5B16E28D2600F5E3CF /* Baby Brands */,
 				A3E9DD5416E28D2600F5E3CF /* Frameworks */,
 				A3E9DD5316E28D2600F5E3CF /* Products */,
@@ -182,7 +200,7 @@
 		A3E9DD5416E28D2600F5E3CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */,
+				A3B0CDC116E42F7F001EF5B4 /* QuartzCore.framework */,
 				A3E9DD8E16E2BF9C00F5E3CF /* libsqlite3.dylib */,
 				A3E9DD8C16E2BF8A00F5E3CF /* GameKit.framework */,
 				A3E9DD5516E28D2600F5E3CF /* UIKit.framework */,
@@ -195,6 +213,9 @@
 		A3E9DD5B16E28D2600F5E3CF /* Baby Brands */ = {
 			isa = PBXGroup;
 			children = (
+				A3F3651C16E8307A00B6C0D5 /* Baby Brands.entitlements */,
+				A3F3650716E5785800B6C0D5 /* graph.h */,
+				A3F3650816E5785800B6C0D5 /* graph.m */,
 				A3E9DDCD16E2F03500F5E3CF /* TicTacToe.m */,
 				A3E9DDCE16E2F03500F5E3CF /* TicTacToe.h */,
 				A3E9DDC316E2D16100F5E3CF /* DTCustomColoredAccessory.h */,
@@ -209,7 +230,6 @@
 				A3E9DD8716E2BEF700F5E3CF /* support.m */,
 				A3E9DD8916E2BF1B00F5E3CF /* tictactoe_game.h */,
 				A3E9DD8A16E2BF1B00F5E3CF /* tictactoe_game.m */,
-				A3E9DD7F16E2928200F5E3CF /* Baby Brands.entitlements */,
 				A3E9DD6416E28D2600F5E3CF /* AppDelegate.h */,
 				A3E9DD6516E28D2600F5E3CF /* AppDelegate.m */,
 				A3E9DD6D16E28D2600F5E3CF /* iPhone5.storyboard */,
@@ -309,6 +329,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A3F3650C16E57C4800B6C0D5 /* PBXTargetDependency */,
 			);
 			name = "Baby Brands";
 			productName = "Baby Brands";
@@ -391,6 +412,8 @@
 				A379C43C16E3C156005133EE /* Settings.bundle in Resources */,
 				A3B0CDB116E41AF5001EF5B4 /* gamecenter.jpg in Resources */,
 				A3B0CDB516E41F58001EF5B4 /* Podium.png in Resources */,
+				A3F3651916E82B7700B6C0D5 /* icon_2.png in Resources */,
+				A3F3651B16E82B7A00B6C0D5 /* icon_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,10 +433,19 @@
 				A3E9DDB716E2C20900F5E3CF /* popularnames.m in Sources */,
 				A3E9DDBA16E2C2C400F5E3CF /* names.m in Sources */,
 				A3E9DDC016E2CA8D00F5E3CF /* search.m in Sources */,
+				A3F3650916E5785800B6C0D5 /* graph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3F3650C16E57C4800B6C0D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CorePlot-CocoaTouch";
+			targetProxy = A3F3650B16E57C4800B6C0D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A3E9DD5E16E28D2600F5E3CF /* InfoPlist.strings */ = {
@@ -463,7 +495,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: D Ryan Lucas (2A28GRE93G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -477,9 +509,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = .;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "7E43784A-21AC-40A3-8B35-0E825197D843";
+				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,7 +532,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: D Ryan Lucas";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -506,7 +540,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "501647E0-3028-43D7-AFBE-C4FCE86B46B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -516,10 +552,19 @@
 		A3E9DD7916E28D2600F5E3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Baby Brands/Baby Brands.entitlements";
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baby Brands/Baby Brands-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>/**",
+					"/Users/drlucas/Desktop/CorePlot_1-1.1/Source/**",
+				);
 				INFOPLIST_FILE = "Baby Brands/Baby Brands-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -528,10 +573,19 @@
 		A3E9DD7A16E28D2600F5E3CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Baby Brands/Baby Brands.entitlements";
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baby Brands/Baby Brands-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>/**",
+					"/Users/drlucas/Desktop/CorePlot_1-1.1/Source/**",
+				);
 				INFOPLIST_FILE = "Baby Brands/Baby Brands-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
