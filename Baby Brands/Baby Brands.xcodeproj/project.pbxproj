@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A35AE8EE16E971C500288C41 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDA416E2C10900F5E3CF /* FMDatabase.m */; };
+		A35AE8EF16E971C500288C41 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDA616E2C10900F5E3CF /* FMDatabaseAdditions.m */; };
+		A35AE8F016E971C500288C41 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDA816E2C10900F5E3CF /* FMDatabasePool.m */; };
+		A35AE8F116E971C500288C41 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDAA16E2C10900F5E3CF /* FMDatabaseQueue.m */; };
+		A35AE8F216E971C500288C41 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDAD16E2C10900F5E3CF /* FMResultSet.m */; };
+		A35AE8F316E977DE00288C41 /* DTCustomColoredAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E9DDC416E2D16100F5E3CF /* DTCustomColoredAccessory.m */; };
 		A379C43816E3B6CB005133EE /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A379C43716E3B6CB005133EE /* background2.jpg */; };
 		A379C43A16E3B882005133EE /* help_and_support.ico in Resources */ = {isa = PBXBuildFile; fileRef = A379C43916E3B882005133EE /* help_and_support.ico */; };
 		A379C43C16E3C156005133EE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379C43B16E3C156005133EE /* Settings.bundle */; };
@@ -424,6 +430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A35AE8F316E977DE00288C41 /* DTCustomColoredAccessory.m in Sources */,
+				A35AE8EE16E971C500288C41 /* FMDatabase.m in Sources */,
+				A35AE8EF16E971C500288C41 /* FMDatabaseAdditions.m in Sources */,
+				A35AE8F016E971C500288C41 /* FMDatabasePool.m in Sources */,
+				A35AE8F116E971C500288C41 /* FMDatabaseQueue.m in Sources */,
+				A35AE8F216E971C500288C41 /* FMResultSet.m in Sources */,
 				A379C43D16E3D7F2005133EE /* TicTacToe.m in Sources */,
 				A3E9DD6216E28D2600F5E3CF /* main.m in Sources */,
 				A3E9DD6616E28D2600F5E3CF /* AppDelegate.m in Sources */,
@@ -510,7 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = .;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "";
@@ -538,7 +550,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "501647E0-3028-43D7-AFBE-C4FCE86B46B8";

@@ -50,15 +50,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* countrypref = [defaults stringForKey:@"country_preference"];
     UIImage *flagimage;
-    if ( countrypref == nil) {
-        //we don't have any preferences set
-        NSString *defaultcountry = @"United States";
-        [defaults setObject:defaultcountry forKey:@"country_preference"];
-        [defaults synchronize];
-        flagimage = [UIImage imageNamed: @"United-States-Flag-icon.png"];
-        // NSLog( @"Pref is null: %@",countrypref);
-    }
-    
+        
     if ([countrypref isEqualToString:@"United States"]){
         //   NSLog( @"Pref: %@",countrypref);
         // display US flag

@@ -31,7 +31,17 @@
     self.navigationItem.titleView = label;
     label.text = NSLocalizedString(@"Baby Brands", @"");
     [label sizeToFit];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* countrypref = [defaults stringForKey:@"country_preference"];
     
+    if ( countrypref == nil) {
+        //we don't have any preferences set
+        NSString *defaultcountry = @"United States";
+        [defaults setObject:defaultcountry forKey:@"country_preference"];
+        [defaults synchronize];
+        
+        // NSLog( @"Pref is null: %@",countrypref);
+    }
     //start game center up
     [self authenticateLocalPlayer];
 

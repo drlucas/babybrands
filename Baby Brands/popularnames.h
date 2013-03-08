@@ -10,4 +10,21 @@
 
 @interface popularnames : ViewController
 
+{
+    
+    NSMutableArray *datesarray;
+    NSString *dateselected;
+    
+    
+}
+@property (strong) IBOutlet UITableView *datetable;
+@property (strong, nonatomic) IBOutlet UILabel *yearselected; // the year picked from uipicker will fill in here
+
+@property (strong, nonatomic) IBOutlet UIView *yearlistcontainer;
+
+@property (readwrite, copy) NSArray *datesarray;
+@property (readwrite, copy) NSString *dateselected;
+
+
+
 @end
