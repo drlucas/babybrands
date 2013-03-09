@@ -23,7 +23,7 @@
 @property (strong, nonatomic) IBOutlet UIView *yearlistcontainer;
 
 @property (readwrite, copy) NSArray *datesarray;
-@property (readwrite, copy) NSString *dateselected;
+//@property (readwrite, copy) NSString *dateselected;
 
 
 

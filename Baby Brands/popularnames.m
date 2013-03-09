@@ -224,7 +224,7 @@
     {
         if (sex.selectedSegmentIndex == 0) { //male
             querystring = [NSString stringWithFormat:@"SELECT firstname, sum(count) FROM usa where year = '%@' and sex = 'M' GROUP BY firstname order by sum(count) desc", queryyear];
-             NSLog(@"Selected sex: %@", querystring);
+           //  NSLog(@"Selected sex: %@", querystring);
             
         }
         if (sex.selectedSegmentIndex == 1) { //female
@@ -297,27 +297,6 @@
 
 /*
 
-- (id)tableView:datetable objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)row {
-    babyname* dataEntry = [babynames objectAtIndex:row];
-    if([[aTableColumn identifier] isEqual:@"col1"])
-    {
-        //    NSLog(@"name: %@ column: %@ row: %i", dataEntry.firstname, [aTableColumn identifier], row);
-        return dataEntry.firstname;
-    }
-    
- 
- 
- /*if([[aTableColumn identifier] isEqual:@"col2"])
-     {
-     // NSLog(@"name: %@ column: %@ row: %i", dataEntry.firstname, [aTableColumn identifier], row);
-     NSNumberFormatter *yearformatter = [[NSNumberFormatter alloc] init];
-     [yearformatter setNumberStyle:NSNumberFormatterNoStyle];
-     NSString *formattedOutput = [yearformatter stringFromNumber:[NSNumber numberWithInt:dataEntry.year]];
-     //NSLog(@"System free space: %@", formattedOutput);
-     return formattedOutput;
-     }*/
-/*
-
 if([[aTableColumn identifier] isEqual:@"col2"])
     {
         // NSLog(@"name: %@ column: %@ row: %i", dataEntry.firstname, [aTableColumn identifier], row);
@@ -346,16 +325,11 @@ if([[aTableColumn identifier] isEqual:@"col2"])
     static NSString *CellIdentifier = @"popularcell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];}
+    //if (cell == nil) {cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];}
     cell.textLabel.textColor = [UIColor whiteColor];
-    
-   // babyname * babyn = [[babyname alloc] init];
     babyname* babyn = [babynames objectAtIndex:indexPath.row];
-  //  NSLog(@"Indexpath %i", indexPath);
-    NSString *fname = [NSString stringWithFormat:@"%@", babyn.firstname];
-    cell.textLabel.text = fname;
-    
-    //cell.detailTextLabel.text = earner.lastname;
-    //cell.textLabel.text = [browsemenu objectAtIndex:indexPath.row];  //from original array
+    NSString *name = [NSString stringWithFormat:@"#%i - %@", (indexPath.row+1), babyn.firstname];
+    cell.textLabel.text = name;
     DTCustomColoredAccessory *accessory = [DTCustomColoredAccessory accessoryWithColor:cell.textLabel.textColor];
     accessory.highlightedColor = [UIColor whiteColor];
     cell.accessoryView =accessory;
@@ -366,9 +340,12 @@ if([[aTableColumn identifier] isEqual:@"col2"])
     cell.backgroundColor = [UIColor colorWithRed:0 green:0.188235 blue:0.313725 alpha:1];
 }
 
+
+
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+   
     //once i got the right row selected, then move over to the new view
     /*
      if (indexPath.row == 0) {
@@ -378,12 +355,7 @@ if([[aTableColumn identifier] isEqual:@"col2"])
      if (indexPath.row ==1 ) {
      NSLog(@"Row Selected = %i",indexPath.row);
      //
-     //[self performSegueWithIdentifier:@"search" sender:self];
-     }
-     if (indexPath.row ==2 ) {
-     //[self performSegueWithIdentifier:@"support" sender:self];
-     }
-     */
+         */
 }
 
 

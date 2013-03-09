@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "GameKit/GameKit.h"
-
+#import <Social/Social.h>
 
 @interface ViewController ()
 
@@ -71,6 +71,20 @@
         }
         
     })];
+}
+
+- (IBAction)tweettapped:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:@"Baby Brands helped me pick my baby's name!"];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"You can't send a tweet right now, make sure your device has an internet connection and you hav at least one Twitter account setup" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
 }
 
 

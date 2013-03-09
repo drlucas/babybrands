@@ -85,5 +85,9 @@
 
 }
 
+ -(NSUInteger) numberOfRecordsForPlot:(CPTPlot *)plot
+{
+    return 1;
+}
 
 @end
