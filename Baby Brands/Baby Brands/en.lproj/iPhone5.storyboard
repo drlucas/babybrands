@@ -626,15 +626,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7UO-Yj-qpg">
-                                <rect key="frame" x="0.0" y="0.0" width="314" height="198"/>
+                                <rect key="frame" x="0.0" y="36" width="320" height="382"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6Jp-7n-Rpc">
-                                        <rect key="frame" x="0.0" y="22" width="314" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="popularcell" id="6Jp-7n-Rpc">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -645,15 +645,15 @@
                                     <outlet property="delegate" destination="fRv-JB-utR" id="Weh-T4-qUv"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2010" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I7C-xW-o5b">
-                                <rect key="frame" x="154" y="325" width="160" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2010" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I7C-xW-o5b">
+                                <rect key="frame" x="0.0" y="7" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="dVH-Be-ljh">
-                                <rect key="frame" x="8" y="383" width="155" height="44"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dVH-Be-ljh">
+                                <rect key="frame" x="83" y="485" width="155" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Male"/>
@@ -663,18 +663,6 @@
                                     <action selector="changesex:" destination="fRv-JB-utR" eventType="valueChanged" id="BRH-KK-33p"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cnM-v1-KJn">
-                                <rect key="frame" x="7" y="453" width="244" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="List Names">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" id="BWY-D9-iVf">
                                 <rect key="frame" x="0.0" y="555" width="320" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -683,7 +671,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <items>
-                                            <barButtonItem style="plain" id="BU6-YM-eFX"/>
+                                            <barButtonItem title="Select Year" style="plain" id="BU6-YM-eFX"/>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="gzh-q3-FgB"/>
                                             <barButtonItem title="Close" id="u4Z-94-lXX">
                                                 <connections>
@@ -704,7 +692,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2IE-nj-6Ud">
-                                <rect key="frame" x="8" y="315" width="136" height="44"/>
+                                <rect key="frame" x="83" y="448" width="155" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Change Year">
@@ -722,7 +710,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Popular Names" id="D1V-d1-h6i"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="changeyearbtn" destination="2IE-nj-6Ud" id="IdW-yP-GyO"/>
                         <outlet property="datetable" destination="7UO-Yj-qpg" id="Vbz-dx-a8r"/>
                         <outlet property="sex" destination="dVH-Be-ljh" id="wJu-Zz-PQH"/>
                         <outlet property="yearlist" destination="eqA-7q-AKC" id="vrL-5K-015"/>
@@ -732,7 +722,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfj-Yj-iHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405" y="54"/>
+            <point key="canvasLocation" x="1407" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9hQ-Z1-Doy">
@@ -768,39 +758,6 @@
         <image name="search.png" width="128" height="128"/>
         <image name="tic-tac-toe.png" width="297" height="297"/>
     </resources>
-    <classes>
-        <class className="CPTGraphHostingView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CPTGraphHostingView.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-        <class className="graph" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/graph.h"/>
-            <relationships>
-                <relationship kind="outlet" name="hostView" candidateClass="CPTGraphHostingView"/>
-            </relationships>
-        </class>
-        <class className="popularnames" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/popularnames.h"/>
-            <relationships>
-                <relationship kind="action" name="changesex:"/>
-                <relationship kind="action" name="changeyear:"/>
-                <relationship kind="action" name="hide40picker:"/>
-                <relationship kind="outlet" name="datetable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="sex" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="yearlist" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="yearlistcontainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="yearselected" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="support" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/support.h"/>
-        </class>
-        <class className="tictactoe_game" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/tictactoe_game.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
