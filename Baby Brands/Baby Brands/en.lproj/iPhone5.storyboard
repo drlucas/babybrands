@@ -75,15 +75,17 @@
             <objects>
                 <viewController id="VBf-cN-5Ug" customClass="graph" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7rg-Ef-icm" customClass="CPTGraphHostingView">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="nLL-G8-Cbc">
                         <barButtonItem key="backBarButtonItem" title="Back" id="aYQ-32-7fg"/>
                     </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="hostView" destination="7rg-Ef-icm" id="udG-7O-EkC"/>
+                        <outlet property="hostView" destination="7rg-Ef-icm" id="iAI-en-frd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gS5-dY-tIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -626,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="1018" y="-365"/>
         </scene>
-        <!--Popularnames - Popular Names-->
+        <!--Popularnames - Top 15 Names-->
         <scene sceneID="ssa-fw-RTH">
             <objects>
                 <viewController id="fRv-JB-utR" customClass="popularnames" sceneMemberID="viewController">
@@ -710,7 +712,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Popular Names" id="D1V-d1-h6i">
+                    <navigationItem key="navigationItem" title="Top 15 Names" id="D1V-d1-h6i">
                         <barButtonItem key="backBarButtonItem" title="Back" id="uy9-5r-vQj"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -770,6 +772,9 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tweettapped:"/>
+            </relationships>
         </class>
         <class className="graph" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/graph.h"/>
@@ -782,11 +787,8 @@
             <relationships>
                 <relationship kind="action" name="changesex:"/>
                 <relationship kind="action" name="changeyear:"/>
-                <relationship kind="action" name="hide40picker:"/>
-                <relationship kind="outlet" name="changeyearbtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="changeyeartext" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="datetable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="sex" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="switchgendertext" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="yearlist" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="yearlistcontainer" candidateClass="UIView"/>
@@ -797,6 +799,9 @@
         </class>
         <class className="tictactoe_game" superclassName="ViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/tictactoe_game.h"/>
+            <relationships>
+                <relationship kind="action" name="clickAction:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

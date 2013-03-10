@@ -19,5 +19,6 @@
 }
 
 @property (nonatomic, strong) NSString *name;
+@property (assign) int sexflag;
 
 @end

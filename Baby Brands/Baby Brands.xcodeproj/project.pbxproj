@@ -233,7 +233,6 @@
 		A3E9DD4916E28D2600F5E3CF = {
 			isa = PBXGroup;
 			children = (
-				A35AE8F716EAD5C200288C41 /* Social.framework */,
 				A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */,
 				A3E9DD5B16E28D2600F5E3CF /* Baby Brands */,
 				A3E9DD5416E28D2600F5E3CF /* Frameworks */,
@@ -252,6 +251,7 @@
 		A3E9DD5416E28D2600F5E3CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A35AE8F716EAD5C200288C41 /* Social.framework */,
 				A3B0CDC116E42F7F001EF5B4 /* QuartzCore.framework */,
 				A3E9DD8E16E2BF9C00F5E3CF /* libsqlite3.dylib */,
 				A3E9DD8C16E2BF8A00F5E3CF /* GameKit.framework */,

@@ -434,6 +434,7 @@
        // NSLog (@"Name: %@",name);
         graph *destViewController = segue.destinationViewController;
         destViewController.name = name;
+        destViewController.sexflag = sex.selectedSegmentIndex;
         }
 }
 
