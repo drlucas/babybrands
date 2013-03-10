@@ -10,4 +10,6 @@
 
 @interface search : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *searchtable;
+
 @end

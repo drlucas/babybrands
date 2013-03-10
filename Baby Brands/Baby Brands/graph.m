@@ -120,7 +120,7 @@
     //mygraph.titleDisplacement        = CGPointMake(0.0, 20.0);
     
     // Graph padding
-    mygraph.paddingLeft   = 35.0;
+    mygraph.paddingLeft   = 45.0;
     mygraph.paddingTop    = 5.0;
     mygraph.paddingRight  = 15.0;
     mygraph.paddingBottom = 25.0;

@@ -65,9 +65,6 @@
         //NSLog( @"Pref: %@",countrypref);
     }
     [countryflag setImage:flagimage];
-    
-
-    
 
 }
 
@@ -123,7 +120,13 @@
         
         
 	}
-    [countryflag setImage:flagimage];}
+    [countryflag setImage:flagimage];
+}
+
+- (IBAction)colorfulname:(UIButton *)sender {
+    
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://omg.yahoo.com/blogs/celeb-news/holly-madison-gives-newborn-daughter-colorful-name-194527656.html"]];    
+}
 
 
 - (void)didReceiveMemoryWarning
