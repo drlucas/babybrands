@@ -28,6 +28,8 @@
     
 }
 
+@synthesize name;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,7 +43,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.243 green:0.125 blue:0.345 alpha:1];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero] ;
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:30.0];
+    label.textColor = [UIColor whiteColor];
+    self.navigationItem.titleView = label;
+    label.text = [NSString stringWithFormat:@"%@", name];
+    [label sizeToFit];
     [self initPlot]; //go go graph :)
 }
 

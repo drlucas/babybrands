@@ -18,4 +18,6 @@
     CPTXYGraph *mygraph;
 }
 
+@property (nonatomic, strong) NSString *name;
+
 @end

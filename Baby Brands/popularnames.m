@@ -11,6 +11,9 @@
 #import "FMResultSet.h"
 #import "DTCustomColoredAccessory.h"
 #import "names.h"
+#import "namecellCell.h"
+#import "graph.h"
+#define kNameCellIdentifier @"NameCellIdentifier"
 
 
 @interface popularnames ()
@@ -24,6 +27,9 @@
     IBOutlet UIPickerView *yearlist;
     IBOutlet UISegmentedControl *sex;
     IBOutlet UIButton *changeyearbtn;
+    IBOutlet UILabel *changeyeartext;
+    IBOutlet UILabel *switchgendertext;
+    
     
     NSInteger pickerrow;
     NSString *yearselect;
@@ -31,7 +37,7 @@
     NSUserDefaults *defaults;
     NSString* countrypref;
     NSString *queryyear;
-    
+    UILabel *label;
 }
 
 @synthesize datesarray;   //array to store years to display in popup selector
@@ -50,24 +56,28 @@
 
 - (void)viewDidLoad
 {
+    //not needed - not changing button anymore -- changeyearbtn.titleLabel. numberOfLines = 0; // Dynamic number of lines
+    // changeyearbtn.titleLabel.lineBreakMode = UILineBreakModeWordWrap;
+    // Change the tintColor of each subview within the array:
+
     [super viewDidLoad];
+    [self.datetable registerNib:[UINib nibWithNibName:@"namecell" bundle:nil] forCellReuseIdentifier:kNameCellIdentifier]; //setup my customcell
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.243 green:0.125 blue:0.345 alpha:1];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero] ;
+    queryyear = @"2010";//seed the default popup button with a value
+        [self titlebarupdate]; 
+    [self datesList]; // this will populate the popup button values
+    [self popularlist];
+   
+}
+
+-(void) titlebarupdate {
+    label = [[UILabel alloc] initWithFrame:CGRectZero] ;
     label.backgroundColor = [UIColor clearColor];
     label.font = [UIFont boldSystemFontOfSize:15.0];
     label.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = label;
-    label.text = NSLocalizedString(@"Name Popularity", @"");
+    label.text = [NSString stringWithFormat:@"Top 15 Names for %@", queryyear];
     [label sizeToFit];
-    
-    //NSLog(@"Value is %i", sex.selectedSegmentIndex); 0 is male, 1 is female
-    queryyear = @"2010";//seed the default popup button with a value
-    _yearselected.text = [NSString stringWithFormat:@"Top 15 names for %@", queryyear];
-    [self datesList]; // this will populate the popup button values
-    [self popularlist];
-   
-   // [self popularlist];
-   // [datetable reloadData];
 }
 
 -(NSMutableArray *) datesList {
@@ -146,22 +156,27 @@
     pickerrow = [yearlist selectedRowInComponent:0];
     yearselect = [[datesarray objectAtIndex:pickerrow] stringValue];
     queryyear =  yearselect;
-    _yearselected.text = [NSString stringWithFormat:@"Top 15 names for %@", yearselect]; //seed the default popup button with a value
-
+    //label = [NSString stringWithFormat:@"Top 15 Names for %@", yearselect]; //seed the default popup button with a value
     [self popularlist];
     [datetable reloadData];
+    [self titlebarupdate];
 }
 
 - (IBAction)hide40picker:(id)sender {
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     yearlistcontainer.frame = CGRectMake(0, 550, 320, 224);
-    [UIView commitAnimations];
+    
     changeyearbtn.hidden = NO;
+    changeyeartext.hidden = NO;
+    switchgendertext.hidden = NO;
+    [UIView commitAnimations];
 }
 - (IBAction)changeyear:(id)sender {
     //hide change year button
     changeyearbtn.hidden = YES;
+    changeyeartext.hidden = YES;
+    switchgendertext.hidden = YES;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     yearlistcontainer.frame = CGRectMake(0, 300, 320, 224);
@@ -176,7 +191,10 @@
 
 - (IBAction)changesex:(id)sender {
     // NSLog(@"Value is %i", sex.selectedSegmentIndex);
-    // do something if the sex changes (later on i'll do another reload of the table data)
+    /*NSArray *arri = [sex subviews];
+    [[arri objectAtIndex:0] setTintColor:[UIColor colorWithRed:1.0f green:0.0f  blue:0.5f  alpha:1.0f]];
+    [[arri objectAtIndex:1] setTintColor:[UIColor colorWithRed:0.0f green:0.0f  blue:1.0f  alpha:1.0f]];
+    sex.segmentedControlStyle = UISegmentedControlStyleBar;*/
     [self popularlist];
     [datetable reloadData];
 
@@ -295,67 +313,128 @@
         
     }
 
-/*
-
-if([[aTableColumn identifier] isEqual:@"col2"])
-    {
-        // NSLog(@"name: %@ column: %@ row: %i", dataEntry.firstname, [aTableColumn identifier], row);
-        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-        [formatter setNumberStyle:NSNumberFormatterNoStyle];
-        NSString *formattedOutput = [formatter stringFromNumber:[NSNumber numberWithInt:dataEntry.frequency]];
-        return formattedOutput;
-    }
-    
-    if([[aTableColumn identifier] isEqual:@"col3"])
-    {
-        long myrow = row +1;
-        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-        [formatter setNumberStyle:NSNumberFormatterNoStyle];
-        NSString *formattedOutput = [formatter stringFromNumber:[NSNumber numberWithInt:myrow]];
-        return formattedOutput;
-    }
-    
-    return @"nadda";
-}
-*/
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"popularcell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];}
-    //if (cell == nil) {cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];}
-    cell.textLabel.textColor = [UIColor whiteColor];
+    
+    NSString *cellIdentifier = kNameCellIdentifier;
+    namecellCell *nameCell = (namecellCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     babyname* babyn = [babynames objectAtIndex:indexPath.row];
-    NSString *name = [NSString stringWithFormat:@"#%i - %@", (indexPath.row+1), babyn.firstname];
-    cell.textLabel.text = name;
-    DTCustomColoredAccessory *accessory = [DTCustomColoredAccessory accessoryWithColor:cell.textLabel.textColor];
-    accessory.highlightedColor = [UIColor whiteColor];
-    cell.accessoryView =accessory;
-    return cell;
+    NSString *icon1name;
+    NSString *icon2name;
+    NSString *icon3name;
+    if (indexPath.row ==0) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==1) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==2) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==3) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==4) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==5) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==6) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==7) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==8) {
+        icon3name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
+        icon2name = nil;
+        icon1name = nil;}
+    else if (indexPath.row ==9) {
+        icon3name = nil;
+        icon1name = [NSString stringWithFormat:@"animal_number_1.png"];
+        icon2name = [NSString stringWithFormat:@"animal_number_0.png"];}
+    else if (indexPath.row ==10) {
+        icon3name = nil;
+        icon1name = [NSString stringWithFormat:@"animal_number_1.png"];
+        icon2name = [NSString stringWithFormat:@"animal_number_1.png"];}
+    else if (indexPath.row ==11) {
+        icon3name = nil;
+        icon1name = [NSString stringWithFormat:@"animal_number_1.png"];
+        icon2name = [NSString stringWithFormat:@"animal_number_2.png"];}
+    else if (indexPath.row ==12) {
+        icon3name = nil;
+        icon1name = [NSString stringWithFormat:@"animal_number_1.png"];
+        icon2name = [NSString stringWithFormat:@"animal_number_3.png"];}
+    else if (indexPath.row ==13) {
+        icon3name = nil;
+        icon1name = [NSString stringWithFormat:@"animal_number_1.png"];
+        icon2name = [NSString stringWithFormat:@"animal_number_4.png"];}
+    else   {
+        icon3name = nil;
+        icon1name = [NSString stringWithFormat:@"animal_number_1.png"];
+        icon2name = [NSString stringWithFormat:@"animal_number_5.png"];
+    };
+    nameCell.icon3View.image = [UIImage imageNamed:icon3name];
+    nameCell.icon2View.image = [UIImage imageNamed:icon2name];
+    nameCell.icon1View.image = [UIImage imageNamed:icon1name];
+    nameCell.cellName.text =  babyn.firstname;
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterNoStyle];
+    NSString *formattedOutput = [formatter stringFromNumber:[NSNumber numberWithInt:babyn.frequency]];
+    nameCell.cellCount.text = formattedOutput;
+    DTCustomColoredAccessory *accessory = [DTCustomColoredAccessory accessoryWithColor:nameCell.textLabel.textColor];
+    accessory.highlightedColor = [UIColor blueColor];
+    nameCell.accessoryView =accessory;
+    return nameCell;
 }
 
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+
+{
+    return @"Rank      Name            Total Births";
+}
+
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor colorWithRed:0 green:0.188235 blue:0.313725 alpha:1];
+   cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
 }
 
 
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-   
-    //once i got the right row selected, then move over to the new view
-    /*
-     if (indexPath.row == 0) {
-     NSLog(@"Row Selected = %i",indexPath.row);
-     //[self performSegueWithIdentifier:@"ShowEarnerDetails" sender:self];
-     }
-     if (indexPath.row ==1 ) {
-     NSLog(@"Row Selected = %i",indexPath.row);
-     //
-         */
+	//[tableView deselectRowAtIndexPath:indexPath animated:YES];
+   // babyname* babyn = [babynames objectAtIndex:indexPath.row];
+   // NSString *name = [NSString stringWithFormat:@"%@",  babyn.firstname];
+   // NSLog (@"Name: %@",name);
+    [self performSegueWithIdentifier:@"movetograph" sender:nil];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"movetograph"]) {
+       // NSLog(@"identifier: %@",segue.identifier);
+        NSIndexPath *indexPath = [self.datetable indexPathForSelectedRow];
+        babyname* babyn = [babynames objectAtIndex:indexPath.row];
+        NSString *name = [NSString stringWithFormat:@"%@",  babyn.firstname];
+       // NSLog (@"Name: %@",name);
+        graph *destViewController = segue.destinationViewController;
+        destViewController.name = name;
+        }
 }
 
 
@@ -364,8 +443,10 @@ if([[aTableColumn identifier] isEqual:@"col2"])
     sex = nil;
     [self setYearlistcontainer:nil];
     yearlist = nil;
-    [self setYearselected:nil];
+    //[self setYearselected:nil];
     changeyearbtn = nil;
+    changeyeartext = nil;
+    switchgendertext = nil;
     [super viewDidUnload];
 }
 @end

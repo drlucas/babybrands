@@ -18,7 +18,7 @@
     
 }
 @property (strong) IBOutlet UITableView *datetable;
-@property (strong, nonatomic) IBOutlet UILabel *yearselected; // the year picked from uipicker will fill in here
+//@property (strong, nonatomic) IBOutlet UILabel *yearselected; // the year picked from uipicker will fill in here
 
 @property (strong, nonatomic) IBOutlet UIView *yearlistcontainer;
 
