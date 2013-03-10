@@ -150,11 +150,24 @@
     nameCell.cellname.text =  babyn.firstname;
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterNoStyle];
+    if (babyn.malecount == babyn.femalecount) {
+        // shade both cells green
+        nameCell.cellfemale.backgroundColor = [UIColor greenColor];
+        nameCell.cellmale.backgroundColor = [UIColor greenColor];
+    }
+    if (babyn.malecount < babyn.femalecount) {
+        // shade female cell pink
+        nameCell.cellfemale.backgroundColor = [UIColor redColor];
+    }
+    if (babyn.malecount > babyn.femalecount) {
+        // shade male cell blue
+        nameCell.cellmale.backgroundColor = [UIColor blueColor];
+    }
+    
     NSString *maleOutput = [formatter stringFromNumber:[NSNumber numberWithInt:babyn.malecount]];
     NSString *femaleOutput = [formatter stringFromNumber:[NSNumber numberWithInt:babyn.femalecount]];
     nameCell.cellmale.text = maleOutput;
     nameCell.cellfemale.text = femaleOutput;
-    
     return nameCell;
     
 }
