@@ -70,28 +70,6 @@
             </objects>
             <point key="canvasLocation" x="523" y="-638"/>
         </scene>
-        <!--Graph - Graph-->
-        <scene sceneID="T0Q-dd-63s">
-            <objects>
-                <viewController id="VBf-cN-5Ug" customClass="graph" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7rg-Ef-icm" customClass="CPTGraphHostingView">
-                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Graph" id="nLL-G8-Cbc">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="aYQ-32-7fg"/>
-                    </navigationItem>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="hostView" destination="7rg-Ef-icm" id="iAI-en-frd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gS5-dY-tIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1787" y="59"/>
-        </scene>
         <!--View Controller - Baby Brands-->
         <scene sceneID="5">
             <objects>
@@ -724,12 +702,30 @@
                         <outlet property="switchgendertext" destination="8dg-GV-OQz" id="bsb-vh-7lO"/>
                         <outlet property="yearlist" destination="eqA-7q-AKC" id="vrL-5K-015"/>
                         <outlet property="yearlistcontainer" destination="BWY-D9-iVf" id="2Dh-jB-D69"/>
-                        <segue destination="VBf-cN-5Ug" kind="push" identifier="movetograph" id="tsz-hK-xe9"/>
+                        <segue destination="elj-h9-6VX" kind="push" identifier="movetograph" id="MWo-lc-ix2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfj-Yj-iHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1360" y="76"/>
+        </scene>
+        <!--Graph-->
+        <scene sceneID="b9S-QC-Iex">
+            <objects>
+                <viewController id="elj-h9-6VX" customClass="graph" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01Y-KP-a4r" customClass="CPTGraphHostingView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ki5-Fa-fuy"/>
+                    <connections>
+                        <outlet property="hostView" destination="01Y-KP-a4r" id="E84-2f-56s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxK-GL-Nem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855" y="-61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9hQ-Z1-Doy">
@@ -772,9 +768,6 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="tweettapped:"/>
-            </relationships>
         </class>
         <class className="graph" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/graph.h"/>
@@ -786,11 +779,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/popularnames.h"/>
             <relationships>
                 <relationship kind="action" name="changesex:"/>
-                <relationship kind="action" name="changeyear:"/>
-                <relationship kind="outlet" name="changeyeartext" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="datetable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="switchgendertext" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yearlist" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="yearlistcontainer" candidateClass="UIView"/>
             </relationships>
         </class>
@@ -799,9 +788,6 @@
         </class>
         <class className="tictactoe_game" superclassName="ViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/tictactoe_game.h"/>
-            <relationships>
-                <relationship kind="action" name="clickAction:"/>
-            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -19,6 +19,7 @@
 @property (nonatomic, strong) IBOutlet CPTGraphHostingView *hostView;
 
 
+
 @end
 
 
@@ -33,6 +34,7 @@
 
 @synthesize name;
 @synthesize sexflag;
+@synthesize hostView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,11 +56,8 @@
     self.navigationItem.titleView = label;
     label.text = [NSString stringWithFormat:@"%@", name];
     [label sizeToFit];
-    
-    //need to get in the data to graph first
-    
+
     [self loaddatabase];
-       //[self initPlot]; //go go graph :)
     [self showgraph];
 }
 
@@ -94,76 +93,48 @@
         thexMax = fmax(thexMax, objectx.year );
     }
     
-    //NSLog( @"Max value: %i", thexMax);  //first year the name is known
-    mygraph = [[CPTXYGraph alloc] initWithFrame:self.hostView.bounds];
-    mygraph.plotAreaFrame.masksToBorder = NO;
-    self.hostView.hostedGraph = mygraph;
-    
+    mygraph = [[CPTXYGraph alloc] initWithFrame:CGRectZero];
     CPTTheme *theme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
-    mygraph = (CPTXYGraph *)[theme newGraph];
     [mygraph applyTheme:theme];
     
+    hostView = (CPTGraphHostingView*)self.view;  //new
+    hostView.collapsesLayers = NO; // Setting to YES reduces GPU memory usage, but can slow drawing/scrolling
+    hostView.hostedGraph     = mygraph;
+    
     // Graph title
-    mygraph.title = [NSString stringWithFormat:@"Baby Name: %@", name];
-    CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
+    //mygraph.title = [NSString stringWithFormat:@"Baby Name: %@", name];
+    //CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
     CPTColor *areaColor;
     CPTColor *endingColor;
-    
     if (sexflag == 0) { //male colors
-        
-        
-        areaColor = [CPTColor colorWithComponentRed:0.4
-                                              green:0.8
-                                               blue:1.0
-                                              alpha:1.0];
-        
-        // (0.8) 102  204 - 1
-        endingColor = [CPTColor colorWithComponentRed:0.8
-                                                green:1.0
-                                                 blue:1.0
-                                                alpha:0.2];
-        
-    }
-    if (sexflag==1) //female colors
-    {
-        areaColor = [CPTColor colorWithComponentRed:1.0
-                                              green:0.227
-                                               blue:0.624
-                                              alpha:1.0];
-        
-        
-        endingColor = [CPTColor colorWithComponentRed:1.0
-                                                green:0.227
-                                                 blue:0.624
-                                                alpha:0.0];
-        
-    }
-    textStyle.color  = areaColor;
-    textStyle.fontName             = @"Helvetica-Bold";
-    textStyle.fontSize             = 16.0;
-    textStyle.textAlignment        = CPTTextAlignmentCenter;
-    mygraph.titleTextStyle           = textStyle;
-    mygraph.titleDisplacement        = CGPointMake(0.0, 20.0);
+        areaColor = [CPTColor colorWithComponentRed:0.4  green:0.8 blue:1.0 alpha:1.0];
+        endingColor = [CPTColor colorWithComponentRed:0.8 green:1.0 blue:1.0 alpha:0.2]; }
+    if (sexflag==1) { //female colors
+        areaColor = [CPTColor colorWithComponentRed:1.0 green:0.227 blue:0.624 alpha:1.0];
+        endingColor = [CPTColor colorWithComponentRed:1.0 green:0.227 blue:0.624 alpha:0.0];}
+    //textStyle.color  = areaColor;
+    //textStyle.fontName             = @"Helvetica-Bold";
+    //textStyle.fontSize             = 16.0;
+    //textStyle.textAlignment        = CPTTextAlignmentCenter;
+    //mygraph.titleTextStyle           = textStyle;
+    //mygraph.titleDisplacement        = CGPointMake(0.0, 20.0);
     
     // Graph padding
-    /*
-    graph.paddingLeft   = 35.0;
-    graph.paddingTop    = 35.0;
-    graph.paddingRight  = 35.0;
-    graph.paddingBottom = 35.0;
-    */
+    mygraph.paddingLeft   = 35.0;
+    mygraph.paddingTop    = 5.0;
+    mygraph.paddingRight  = 15.0;
+    mygraph.paddingBottom = 25.0;
+ /*
     mygraph.paddingBottom = 30.0f;
     mygraph.paddingLeft  = 30.0f;
     mygraph.paddingTop    = -1.0f;
     mygraph.paddingRight  = -5.0f;
-    
+    */
     // Setup scatter plot space
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)mygraph.defaultPlotSpace;
     plotSpace.delegate = self;
-   
     plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInteger(thexMin)
                                                     length:CPTDecimalFromInteger(thexMax - thexMin)];
-    
     plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInteger(0)
                                                     length:CPTDecimalFromInteger(theMax+5)];
     
@@ -208,20 +179,11 @@
     yAxis.axisConstraints = [CPTConstraints constraintWithLowerOffset:0.0];
     yAxis.delegate = self;
     
-    
     CPTScatterPlot *boundLinePlot = [[CPTScatterPlot alloc] init];
     boundLinePlot.identifier =@"AllNames";
     boundLinePlot.dataLineStyle = lineStyle;
     boundLinePlot.dataSource = self;
     [mygraph addPlot:boundLinePlot];
-    //is this the green color under plot? //yup
-    // baby blue color = http://www.colorcombos.com/colors/CCFFFF 204,255,255
-    
-    /* CPTColor *areaColor = [CPTColor colorWithComponentRed:0.3
-     green:1.0
-     blue:0.3
-     alpha:0.3];
-     */
     
     CPTGradient *areaGradient = [CPTGradient gradientWithBeginningColor:areaColor
                                                             endingColor:endingColor]; //[CPTColor clearColor]];
@@ -233,46 +195,13 @@
     
 }
 
--(void) initPlot
-{
-    // 1 - Create the graph
-    CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:self.hostView.bounds];
-    graph.plotAreaFrame.masksToBorder = NO;
-    self.hostView.hostedGraph = graph;
-    // 2 - Configure the graph
-    [graph applyTheme:[CPTTheme themeNamed:kCPTPlainBlackTheme]];
-    graph.paddingBottom = 30.0f;
-    graph.paddingLeft  = 30.0f;
-    graph.paddingTop    = -1.0f;
-    graph.paddingRight  = -5.0f;
-    // 3 - Set up styles
-    CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
-    titleStyle.color = [CPTColor whiteColor];
-    titleStyle.fontName = @"Helvetica-Bold";
-    titleStyle.fontSize = 16.0f;
-    // 4 - Set up title
-    NSString *title = @"baby names";
-    graph.title = title;
-    graph.titleTextStyle = titleStyle;
-    graph.titlePlotAreaFrameAnchor = CPTRectAnchorTop;
-    graph.titleDisplacement = CGPointMake(0.0f, -16.0f);
-    // 5 - Set up plot space
-    CGFloat xMin = 0.0f;
-    CGFloat xMax = 8.0f;
-    CGFloat yMin = 0.0f;
-    CGFloat yMax = 8.0f;  // should determine dynamically based on max price
-    CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *) graph.defaultPlotSpace;
-    plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xMin) length:CPTDecimalFromFloat(xMax)];
-    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(yMin) length:CPTDecimalFromFloat(yMax)];
 
-}
-
- -(NSUInteger) numberOfRecordsForPlot:(CPTPlot *)plot
+ -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
     int babycount = (int)[babynames count];
-    NSLog(@"Records: %i",babycount);
+    //NSLog(@"Records: %i",babycount);
     return babycount;
-    //return 1;
+    
 }
 
 -(NSNumber *)numberForPlot:(CPTPlot *)plot
@@ -286,15 +215,14 @@
         case CPTScatterPlotFieldX:
         {
             NSNumber *num = [dataEntry valueForKey:@"year"];
-              NSLog (@"Number year: %@", num);
+          //    NSLog (@"Number year: %@", num);
             return num;
         }
         case CPTScatterPlotFieldY:
         {
             NSNumber *num = [dataEntry valueForKey:@"frequency"];
-               NSLog (@"Number freq: %@", num);
+       //        NSLog (@"Number freq: %@", num);
             return num;
-            
         }
     }
     return nil;
