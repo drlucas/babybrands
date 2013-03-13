@@ -131,7 +131,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 
 {
-    return @"Name     Total Male  Total Female";
+    return @"Name     # of Male  # of Female";
     
 }
 
@@ -150,7 +150,9 @@
     nameCell.cellname.text =  babyn.firstname;
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterNoStyle];
-    if (babyn.malecount == babyn.femalecount) {
+    
+    /*
+     if (babyn.malecount == babyn.femalecount) {
         // shade both cells green
         nameCell.cellfemale.backgroundColor = [UIColor greenColor];
         nameCell.cellmale.backgroundColor = [UIColor greenColor];
@@ -163,11 +165,21 @@
         // shade male cell blue
         nameCell.cellmale.backgroundColor = [UIColor blueColor];
     }
+    */
     
     NSString *maleOutput = [formatter stringFromNumber:[NSNumber numberWithInt:babyn.malecount]];
     NSString *femaleOutput = [formatter stringFromNumber:[NSNumber numberWithInt:babyn.femalecount]];
     nameCell.cellmale.text = maleOutput;
     nameCell.cellfemale.text = femaleOutput;
+   /*
+    UIImage *image = [UIImage imageNamed:@"background2.jpg"];
+    CGFloat y = indexPath.row * 35;
+    for (y; y+35 > image.size.height; y -= image.size.height);
+    CGRect cropRect = CGRectMake(0, y, 320, 35);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
+    nameCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:imageRef]];
+    */
+
     return nameCell;
     
 }

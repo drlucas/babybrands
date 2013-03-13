@@ -115,7 +115,6 @@
 								<string key="NSFrame">{{231, 6}, {79, 21}}</string>
 								<reference key="NSSuperview" ref="698071209"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -152,7 +151,12 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="698071209"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="316118199"/>
+				<object class="NSColor" key="IBUIBackgroundColor">
+					<int key="NSColorSpace">6</int>
+					<string key="NSCatalogName">System</string>
+					<string key="NSColorName">selectedControlColor</string>
+					<reference key="NSColor" ref="316118199"/>
+				</object>
 				<string key="IBUIRestorationIdentifier">namecell</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>

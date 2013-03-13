@@ -396,15 +396,27 @@
     DTCustomColoredAccessory *accessory = [DTCustomColoredAccessory accessoryWithColor:nameCell.textLabel.textColor];
     accessory.highlightedColor = [UIColor blueColor];
     nameCell.accessoryView =accessory;
+    /*
+    UIImage *image = [UIImage imageNamed:@"background2.jpg"];
+    CGFloat y = indexPath.row * 35;
+    for (y; y+35 > image.size.height; y -= image.size.height);
+    CGRect cropRect = CGRectMake(0, y, 320, 35);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
+    nameCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:imageRef]];
+     */
     return nameCell;
 }
+
+
+
+
 
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 
 {
-    return @"Rank      Name            Total Births";
+    return @"Rank      Name         Total Births";
 }
 
 

@@ -45,6 +45,7 @@
     [super viewDidLoad];
     [self.searchtable registerNib:[UINib nibWithNibName:@"searchcell" bundle:nil] forCellReuseIdentifier:kSearchCellIdentifier]; //setup my customcell
     searchtable.hidden = YES; //hide table until search results are known
+    
 	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.243 green:0.125 blue:0.345 alpha:1];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero] ;
     label.backgroundColor = [UIColor clearColor];
@@ -54,10 +55,20 @@
     label.text = NSLocalizedString(@"Search", @"");
     [label sizeToFit];
 
+    
+    
 }
 
 @synthesize searchtable;
 
+/*{
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    
+    return view;
+}
+*/
 
 -(NSMutableArray *) babyList{
     babynames = [[NSMutableArray alloc] initWithCapacity:10];
@@ -130,7 +141,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section //this is the total number of names
 {
-    if ([[UIScreen mainScreen] bounds].size.height == 568){
+if ([[UIScreen mainScreen] bounds].size.height == 568){
         //4 inch screen
         return babynames.count;
         
@@ -181,20 +192,10 @@
         
     }
 */
+  
     
     babyname* babyn = [babynames objectAtIndex:indexPath.row];
-    /*NSString *icon1name;
-        if (indexPath.row ==0) {
-       icon1name = [NSString stringWithFormat:@"animal_number_%i.png",(indexPath.row+1)];
-        }
-    
-    else   {
-        icon1name = [NSString stringWithFormat:@"animal_number_1.png"];
-           };
-    nameCell.icon1View.image = [UIImage imageNamed:icon1name];
-    nameCell.icon1View.image = nil;
-     */
-    
+        
     nameCell.cellName.text =  babyn.firstname;
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterNoStyle];
@@ -203,6 +204,14 @@
     DTCustomColoredAccessory *accessory = [DTCustomColoredAccessory accessoryWithColor:nameCell.textLabel.textColor];
     accessory.highlightedColor = [UIColor blueColor];
     nameCell.accessoryView =accessory;
+   
+    /*UIImage *image = [UIImage imageNamed:@"background2.jpg"];
+    CGFloat y = indexPath.row * 35;
+    for (y; y+35 > image.size.height; y -= image.size.height);
+    CGRect cropRect = CGRectMake(0, y, 320, 35);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
+    nameCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:imageRef]];
+*/
     return nameCell;
 }
 
@@ -234,6 +243,7 @@
     else {
         resultstext.text = [NSString stringWithFormat:@"%i names found", [babynames count]];
         searchtable.hidden = NO;
+        //searchtable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     }
     // hide table if no records
     

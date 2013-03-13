@@ -22,6 +22,7 @@
 -(void) reset {
 	_moveCount = 0;
 	_winner = ' ';
+    _how = ' ';
 	NSInteger i, j;
 	for (i = 0; i < 3; i++)
 		for (j = 0; j < 3; j++)
@@ -61,6 +62,50 @@
 	[ self whoIsWinner ];
 }
 
+-(char) howwon {
+//figure out how the sucker won....then we can draw a line through!
+    if  (_tttGrid[0][0] == _tttGrid[1][1] && _tttGrid[0][0] == _tttGrid[2][2] && _tttGrid[0][0] != ' ')
+    {  //left to right diagonal
+        _how = 'A';
+        return _how;
+    }
+    else if (_tttGrid[2][0] == _tttGrid[1][1] && _tttGrid[2][0] == _tttGrid[0][2] && _tttGrid[2][0] != ' ')
+    { //right to left diagonal
+        _how = 'B';
+        return _how;
+    }
+    else if (_tttGrid[0][0] == _tttGrid[0][1] && _tttGrid[0][0] == _tttGrid[0][2] && _tttGrid[0][0] != ' ')
+    { //right to left diagonal
+        _how = 'C';
+        return _how;
+    }
+    else if (_tttGrid[1][0] == _tttGrid[1][1] && _tttGrid[1][0] == _tttGrid[1][2] && _tttGrid[1][0] != ' ')
+    { //right to left diagonal
+        _how = 'D';
+        return _how;
+    }
+    else if (_tttGrid[2][0] == _tttGrid[2][1] && _tttGrid[2][0] == _tttGrid[2][2] && _tttGrid[2][0] != ' ')
+    { //right to left diagonal
+        _how = 'E';
+        return _how;
+    }
+    else if (_tttGrid[0][0] == _tttGrid[1][0] && _tttGrid[0][0] == _tttGrid[2][0] && _tttGrid[0][0] != ' ')
+    { //right to left diagonal
+        _how = 'F';
+        return _how;
+    }
+    else if (_tttGrid[0][1] == _tttGrid[1][1] && _tttGrid[0][1] == _tttGrid[2][1] && _tttGrid[0][1] != ' ')
+    { //right to left diagonal
+        _how = 'G';
+        return _how;
+    }
+    else // (_tttGrid[0][2] == _tttGrid[1][2] && _tttGrid[0][2] == _tttGrid[2][2] && _tttGrid[0][2] != ' ')
+    { //right to left diagonal
+        _how = 'H';
+        return _how;
+    }
+
+}
 -(char) whoIsWinner {
     
 	//do we have a winner?

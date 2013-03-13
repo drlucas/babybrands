@@ -8,6 +8,8 @@
 
 #import "support.h"
 #import "GameKit/GameKit.h"
+#import <MessageUI/MessageUI.h>
+
 
 @interface support ()
 
@@ -123,9 +125,21 @@
     [countryflag setImage:flagimage];
 }
 
-- (IBAction)colorfulname:(UIButton *)sender {
-    
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://omg.yahoo.com/blogs/celeb-news/holly-madison-gives-newborn-daughter-colorful-name-194527656.html"]];    
+- (IBAction)colorfulname:(UIButton *)sender {   //this is actually how we do support now!
+    // [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://omg.yahoo.com/blogs/celeb-news/holly-madison-gives-newborn-daughter-colorful-name-194527656.html"]];
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+	controller.mailComposeDelegate = self;
+	 NSArray *toRecipients=[NSArray arrayWithObject:@"support@watchthebirdies.com"];
+    [controller setToRecipients:toRecipients];
+    [controller setSubject:@"Feature Request/Bug Report"];
+	[controller setMessageBody:@"" isHTML:NO];
+	[self presentModalViewController:controller animated:YES];
+	
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+	[self becomeFirstResponder];
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 

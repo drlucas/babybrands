@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "GameKit/GameKit.h"
+#import <MessageUI/MessageUI.h>
 
-@interface support : ViewController <GKGameCenterControllerDelegate> {
+@interface support : ViewController <GKGameCenterControllerDelegate,  MFMailComposeViewControllerDelegate> {
 //@interface support : ViewController  {
     
 }

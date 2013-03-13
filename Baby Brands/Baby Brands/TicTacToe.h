@@ -11,6 +11,7 @@
     NSInteger _tttGrid[3][3];
     NSInteger _moveCount;
     char _winner;
+    char _how;
 }
 
 -(id) init;
@@ -19,5 +20,6 @@
 -(char) getValueAtColumn: (NSInteger) col andRow: (NSInteger) row;
 -(void) makeMoveAtColumn: (NSInteger) col andRow: (NSInteger) row;
 -(char) whoIsWinner;
+-(char) howwon;
 
 @end

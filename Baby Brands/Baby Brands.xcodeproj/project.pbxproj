@@ -34,6 +34,8 @@
 		A35AE92216ED3E6000288C41 /* unisex.m in Sources */ = {isa = PBXBuildFile; fileRef = A35AE92116ED3E5F00288C41 /* unisex.m */; };
 		A35AE92516ED432800288C41 /* unisexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A35AE92416ED432800288C41 /* unisexCell.m */; };
 		A35AE92716ED434000288C41 /* unisex.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35AE92616ED433F00288C41 /* unisex.xib */; };
+		A36C082816ED586D00395146 /* E-mail-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A36C082716ED586D00395146 /* E-mail-icon.png */; };
+		A36C082A16ED59D400395146 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36C082916ED59D400395146 /* MessageUI.framework */; };
 		A379C43816E3B6CB005133EE /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A379C43716E3B6CB005133EE /* background2.jpg */; };
 		A379C43A16E3B882005133EE /* help_and_support.ico in Resources */ = {isa = PBXBuildFile; fileRef = A379C43916E3B882005133EE /* help_and_support.ico */; };
 		A379C43C16E3C156005133EE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379C43B16E3C156005133EE /* Settings.bundle */; };
@@ -82,6 +84,7 @@
 		A3F3650A16E57C3700B6C0D5 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B0CDC916E42FB9001EF5B4 /* libCorePlot-CocoaTouch.a */; };
 		A3F3651916E82B7700B6C0D5 /* icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651816E82B7700B6C0D5 /* icon_2.png */; };
 		A3F3651B16E82B7A00B6C0D5 /* icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651A16E82B7A00B6C0D5 /* icon_1.png */; };
+		A3FA0AFB16F00C06009C96C8 /* drawline.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0AFA16F00C06009C96C8 /* drawline.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +130,8 @@
 		A35AE92316ED432700288C41 /* unisexCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unisexCell.h; sourceTree = "<group>"; };
 		A35AE92416ED432800288C41 /* unisexCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = unisexCell.m; sourceTree = "<group>"; };
 		A35AE92616ED433F00288C41 /* unisex.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = unisex.xib; sourceTree = "<group>"; };
+		A36C082716ED586D00395146 /* E-mail-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "E-mail-icon.png"; sourceTree = "<group>"; };
+		A36C082916ED59D400395146 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A379C43716E3B6CB005133EE /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		A379C43916E3B882005133EE /* help_and_support.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = help_and_support.ico; sourceTree = "<group>"; };
 		A379C43B16E3C156005133EE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -201,6 +206,8 @@
 		A3F3651816E82B7700B6C0D5 /* icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_2.png; sourceTree = "<group>"; };
 		A3F3651A16E82B7A00B6C0D5 /* icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_1.png; sourceTree = "<group>"; };
 		A3F3651C16E8307A00B6C0D5 /* Baby Brands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Baby Brands.entitlements"; sourceTree = "<group>"; };
+		A3FA0AF916F00C06009C96C8 /* drawline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawline.h; sourceTree = "<group>"; };
+		A3FA0AFA16F00C06009C96C8 /* drawline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawline.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36C082A16ED59D400395146 /* MessageUI.framework in Frameworks */,
 				A35AE8F816EAD5C200288C41 /* Social.framework in Frameworks */,
 				A3F3650A16E57C3700B6C0D5 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				A3B0CDC216E42F7F001EF5B4 /* QuartzCore.framework in Frameworks */,
@@ -268,6 +276,7 @@
 		A3E9DD5416E28D2600F5E3CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A36C082916ED59D400395146 /* MessageUI.framework */,
 				A35AE8F716EAD5C200288C41 /* Social.framework */,
 				A3B0CDC116E42F7F001EF5B4 /* QuartzCore.framework */,
 				A3E9DD8E16E2BF9C00F5E3CF /* libsqlite3.dylib */,
@@ -310,6 +319,8 @@
 				A3E9DD8716E2BEF700F5E3CF /* support.m */,
 				A3E9DD8916E2BF1B00F5E3CF /* tictactoe_game.h */,
 				A3E9DD8A16E2BF1B00F5E3CF /* tictactoe_game.m */,
+				A3FA0AF916F00C06009C96C8 /* drawline.h */,
+				A3FA0AFA16F00C06009C96C8 /* drawline.m */,
 				A3E9DD6416E28D2600F5E3CF /* AppDelegate.h */,
 				A3E9DD6516E28D2600F5E3CF /* AppDelegate.m */,
 				A3E9DD6D16E28D2600F5E3CF /* iPhone5.storyboard */,
@@ -317,6 +328,7 @@
 				A3E9DD7016E28D2600F5E3CF /* iPad.storyboard */,
 				A3E9DD7316E28D2600F5E3CF /* ViewController.h */,
 				A3E9DD7416E28D2600F5E3CF /* ViewController.m */,
+				A36C082716ED586D00395146 /* E-mail-icon.png */,
 				A3E9DD7E16E2923900F5E3CF /* graphics */,
 				A3E9DD5C16E28D2600F5E3CF /* Supporting Files */,
 			);
@@ -516,6 +528,7 @@
 				A35AE91D16ED2AD500288C41 /* searchcell.xib in Resources */,
 				A35AE91F16ED3D8700288C41 /* Unisex.ico in Resources */,
 				A35AE92716ED434000288C41 /* unisex.xib in Resources */,
+				A36C082816ED586D00395146 /* E-mail-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +559,7 @@
 				A35AE91B16ED2ABF00288C41 /* searchcellCell.m in Sources */,
 				A35AE92216ED3E6000288C41 /* unisex.m in Sources */,
 				A35AE92516ED432800288C41 /* unisexCell.m in Sources */,
+				A3FA0AFB16F00C06009C96C8 /* drawline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

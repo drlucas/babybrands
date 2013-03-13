@@ -8,6 +8,7 @@
 
 #import "tictactoe_game.h"
 #import "TicTacToe.h"
+#import "drawline.h"
 
 @interface tictactoe_game ()
 
@@ -120,6 +121,17 @@
     
     if( [ ttt whoIsWinner ] == 'X' )
     {
+        // lets see how you won!! then we can draw a line
+        if( [ ttt howwon ] == 'A' )
+        {
+            drawline *ttv = [[drawline alloc] initWithFrame:self.view.frame];
+            [self.view addSubview:ttv];
+        }
+        if ([ttt howwon] == 'B')
+        {
+         
+           // [self drawRect];
+        }
         //    NSLog(@"The winner is player one (not the computer)!");
         youcounter++;
         thestreak++;
@@ -186,6 +198,7 @@
     }
     
 }
+
 
 
 -(void) runcomputerturn {
