@@ -34,8 +34,16 @@
     IBOutlet UILabel *streakcount;
     IBOutlet UILabel *txtTitle;
     
-    
+    IBOutlet UIImageView *brdiagwin;
     IBOutlet UIImageView *trdiagwin;
+    
+    IBOutlet UILabel *onehrwin;
+    IBOutlet UILabel *twohrwin;
+    IBOutlet UILabel *threehrwin;
+    
+    IBOutlet UILabel *threecolwin;
+    IBOutlet UILabel *twocolwin;
+    IBOutlet UILabel *onecolwin;
 }
 
     int drawcount;
@@ -76,9 +84,14 @@
     iconimage = 0;
     thestreak = 0;
     ttt = [ [ TicTacToe alloc ] init ];
-    trdiagwin.hidden = TRUE;
-    
-    
+    trdiagwin.hidden = YES;
+    brdiagwin.hidden = YES;
+    onehrwin.hidden = YES;
+    twohrwin.hidden = YES;
+    threehrwin.hidden = YES;
+    onecolwin.hidden = YES;
+    twocolwin.hidden = YES;
+    threecolwin.hidden = YES;
 }
 
 - (void)showAlertView:(id)sender
@@ -86,6 +99,30 @@
     
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over"
                                                       message:@"You win!!!"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Play Again"
+                                            otherButtonTitles:nil];
+    [message show];
+    
+}
+
+- (void)computerwinalert:(id)sender
+{
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                      message:@"You lose!!!"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Play Again"
+                                            otherButtonTitles:nil];
+    [message show];
+    
+}
+
+- (void)drawalert:(id)sender
+{
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                      message:@"We tie!!"
                                                      delegate:self
                                             cancelButtonTitle:@"Play Again"
                                             otherButtonTitles:nil];
@@ -147,10 +184,48 @@
         }
         if ([ttt howwon] == 'B')
         {
-         //show bottom left to top right diagonal 
+         //show bottom left to top right diagonal
+            brdiagwin.hidden = NO;
            
         }
+        if ([ttt howwon] == 'C')
+        {
+            //show bottom left to top right diagonal
+            onehrwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'D')
+        {
+            //show bottom left to top right diagonal
+            twohrwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'E')
+        {
+            //show bottom left to top right diagonal
+            threehrwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'F')
+        {
+            //show bottom left to top right diagonal
+            onecolwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'G')
+        {
+            //show bottom left to top right diagonal
+            twocolwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'H')
+        {
+            //show bottom left to top right diagonal
+            threecolwin.hidden = NO;
+            
+        }
     
+        
         youcounter++;
         thestreak++;
         int percenttoreport = thestreak*10;
@@ -181,13 +256,12 @@
     }
     else if( [ ttt whoIsWinner ] == 'D' )
     {
-        //   NSLog(@"DRAW!");
-       // NSRunAlertPanel(@"Game Over", @"DRAW!", @"Play again", nil, nil);
-        [ self resetBoard ];
+        [ self drawalert:(id)sender ];
         drawcount++;
         thestreak=0;
         streakcount.text = [NSString stringWithFormat:@"%i", thestreak];
         drawcounter.text = [NSString stringWithFormat:@"%i", drawcount];
+        
         
     }
     else
@@ -204,7 +278,7 @@
             txtTitle.text = @"My turn" ;
             // [NSThread sleepUntilDate:future];
             //NSLog(@"hi-myto");
-            [self runcomputerturn];
+            [self runcomputerturn:(id)sender];
             
         }
     }
@@ -212,8 +286,7 @@
 }
 
 
-
--(void) runcomputerturn {
+-(void) runcomputerturn:(id)sender  {
     
     NSString* tttImageFileName = nil;
     UIImage *tttImage = nil;
@@ -233,7 +306,7 @@
     {
         // NSLog(@"ERROR: %@", [ ex reason ]);
         // NSRunAlertPanel(@"ooops", [ ex reason ], @"Try again", nil, nil);
-        [self runcomputerturn];
+        [self runcomputerturn:(id)sender];
         return;
     }
     if( [ ttt whoseTurn ] != 'X' )
@@ -293,8 +366,6 @@
         thestreak++;
         streakcount.text = [NSString stringWithFormat:@"%i", thestreak];
         usercounter.text = [NSString stringWithFormat:@"%i", youcounter];
-       // NSRunAlertPanel(@"Game Over", @"You win!!!", @"Play again", nil, nil);
-        
         [ self resetBoard ];
     }
     else if( [ ttt whoIsWinner ] == 'O' )
@@ -303,24 +374,64 @@
         computercount++;
         computercounter.text  = [NSString stringWithFormat:@"%i", computercount];
         streakcount.text = [NSString stringWithFormat:@"%i", thestreak];
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                          message:@"You lose!!"
-                                                         delegate:nil
-                                                cancelButtonTitle:@"Play Again"
-                                                otherButtonTitles:nil];
-        [message show];
-        // NSRunAlertPanel(@"Game Over", @"You lose!!", @"Play again", nil, nil);
-        [ self resetBoard ];
+        if( [ ttt howwon ] == 'A' )
+        {
+            //show top left to bottom right diagonal
+            trdiagwin.hidden = NO;
+        }
+        if ([ttt howwon] == 'B')
+        {
+            //show bottom left to top right diagonal
+            brdiagwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'C')
+        {
+            //show bottom left to top right diagonal
+            onehrwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'D')
+        {
+            //show bottom left to top right diagonal
+            twohrwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'E')
+        {
+            //show bottom left to top right diagonal
+            threehrwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'F')
+        {
+            //show bottom left to top right diagonal
+            onecolwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'G')
+        {
+            //show bottom left to top right diagonal
+            twocolwin.hidden = NO;
+            
+        }
+        if ([ttt howwon] == 'H')
+        {
+            //show bottom left to top right diagonal
+            threecolwin.hidden = NO;
+            
+        }
+        
+        [self computerwinalert:(id)sender];
+        
     }
     else if( [ ttt whoIsWinner ] == 'D' )
     {
-        //   NSLog(@"DRAW!");
-     //   NSRunAlertPanel(@"Game Over", @"DRAW!", @"Play again", nil, nil);
-        [ self resetBoard ];
         thestreak=0;
         drawcount++;
         streakcount.text = [NSString stringWithFormat:@"%i", thestreak];
         drawcounter.text = [NSString stringWithFormat:@"%i", drawcount];
+        [self drawalert:(id)sender];
         
     }
     else
@@ -339,7 +450,7 @@
             //  NSDate *future = [NSDate dateWithTimeIntervalSinceNow: 1.5 ];  // a simple pause for1.5 seconds
             //  [NSThread sleepUntilDate:future];
             //  NSLog(@"hi-myt");
-            [self runcomputerturn];
+            [self runcomputerturn:(id)sender];
             
         }
     }
@@ -367,8 +478,14 @@
     [ tttC2 setImage:blankImage forState:UIControlStateNormal];
     [ tttC3 setImage:blankImage forState:UIControlStateNormal];
     [ ttt reset ];
-    trdiagwin.hidden = TRUE;
-
+    trdiagwin.hidden = YES;
+    brdiagwin.hidden = YES;
+    onehrwin.hidden = YES;
+    twohrwin.hidden = YES;
+    threehrwin.hidden = YES;
+    onecolwin.hidden = YES;
+    twocolwin.hidden = YES;
+    threecolwin.hidden = YES;
 }
 
 
@@ -401,6 +518,13 @@
 
 - (void)viewDidUnload {
     trdiagwin = nil;
+    brdiagwin = nil;
+    onehrwin = nil;
+    threehrwin = nil;
+    twohrwin = nil;
+    onecolwin = nil;
+    twocolwin = nil;
+    threecolwin = nil;
     [super viewDidUnload];
 }
 @end

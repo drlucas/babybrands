@@ -85,6 +85,7 @@
 		A3F3651916E82B7700B6C0D5 /* icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651816E82B7700B6C0D5 /* icon_2.png */; };
 		A3F3651B16E82B7A00B6C0D5 /* icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651A16E82B7A00B6C0D5 /* icon_1.png */; };
 		A3FA0B0916F400C3009C96C8 /* trdiagwin.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FA0B0816F400C3009C96C8 /* trdiagwin.png */; };
+		A3FA0B1116F47972009C96C8 /* brdiagwin.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FA0B1016F47972009C96C8 /* brdiagwin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,7 @@
 		A3F3651A16E82B7A00B6C0D5 /* icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_1.png; sourceTree = "<group>"; };
 		A3F3651C16E8307A00B6C0D5 /* Baby Brands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Baby Brands.entitlements"; sourceTree = "<group>"; };
 		A3FA0B0816F400C3009C96C8 /* trdiagwin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trdiagwin.png; path = ../../../../trdiagwin.png; sourceTree = "<group>"; };
+		A3FA0B1016F47972009C96C8 /* brdiagwin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brdiagwin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +383,7 @@
 		A3E9DD9116E2C08C00F5E3CF /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
+				A3FA0B1016F47972009C96C8 /* brdiagwin.png */,
 				A3FA0B0816F400C3009C96C8 /* trdiagwin.png */,
 				A3E9DDB216E2C17000F5E3CF /* tic-tac-toe.png */,
 				A3E9DD9316E2C08C00F5E3CF /* blank.png */,
@@ -528,6 +531,7 @@
 				A35AE92716ED434000288C41 /* unisex.xib in Resources */,
 				A36C082816ED586D00395146 /* E-mail-icon.png in Resources */,
 				A3FA0B0916F400C3009C96C8 /* trdiagwin.png in Resources */,
+				A3FA0B1116F47972009C96C8 /* brdiagwin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
