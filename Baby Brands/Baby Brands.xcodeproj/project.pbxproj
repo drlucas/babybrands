@@ -84,7 +84,7 @@
 		A3F3650A16E57C3700B6C0D5 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B0CDC916E42FB9001EF5B4 /* libCorePlot-CocoaTouch.a */; };
 		A3F3651916E82B7700B6C0D5 /* icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651816E82B7700B6C0D5 /* icon_2.png */; };
 		A3F3651B16E82B7A00B6C0D5 /* icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F3651A16E82B7A00B6C0D5 /* icon_1.png */; };
-		A3FA0AFB16F00C06009C96C8 /* drawline.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0AFA16F00C06009C96C8 /* drawline.m */; };
+		A3FA0B0916F400C3009C96C8 /* trdiagwin.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FA0B0816F400C3009C96C8 /* trdiagwin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,8 +206,7 @@
 		A3F3651816E82B7700B6C0D5 /* icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_2.png; sourceTree = "<group>"; };
 		A3F3651A16E82B7A00B6C0D5 /* icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_1.png; sourceTree = "<group>"; };
 		A3F3651C16E8307A00B6C0D5 /* Baby Brands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Baby Brands.entitlements"; sourceTree = "<group>"; };
-		A3FA0AF916F00C06009C96C8 /* drawline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawline.h; sourceTree = "<group>"; };
-		A3FA0AFA16F00C06009C96C8 /* drawline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawline.m; sourceTree = "<group>"; };
+		A3FA0B0816F400C3009C96C8 /* trdiagwin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trdiagwin.png; path = ../../../../trdiagwin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,8 +318,6 @@
 				A3E9DD8716E2BEF700F5E3CF /* support.m */,
 				A3E9DD8916E2BF1B00F5E3CF /* tictactoe_game.h */,
 				A3E9DD8A16E2BF1B00F5E3CF /* tictactoe_game.m */,
-				A3FA0AF916F00C06009C96C8 /* drawline.h */,
-				A3FA0AFA16F00C06009C96C8 /* drawline.m */,
 				A3E9DD6416E28D2600F5E3CF /* AppDelegate.h */,
 				A3E9DD6516E28D2600F5E3CF /* AppDelegate.m */,
 				A3E9DD6D16E28D2600F5E3CF /* iPhone5.storyboard */,
@@ -384,6 +381,7 @@
 		A3E9DD9116E2C08C00F5E3CF /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
+				A3FA0B0816F400C3009C96C8 /* trdiagwin.png */,
 				A3E9DDB216E2C17000F5E3CF /* tic-tac-toe.png */,
 				A3E9DD9316E2C08C00F5E3CF /* blank.png */,
 				A3E9DD9416E2C08C00F5E3CF /* o.png */,
@@ -529,6 +527,7 @@
 				A35AE91F16ED3D8700288C41 /* Unisex.ico in Resources */,
 				A35AE92716ED434000288C41 /* unisex.xib in Resources */,
 				A36C082816ED586D00395146 /* E-mail-icon.png in Resources */,
+				A3FA0B0916F400C3009C96C8 /* trdiagwin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +558,6 @@
 				A35AE91B16ED2ABF00288C41 /* searchcellCell.m in Sources */,
 				A35AE92216ED3E6000288C41 /* unisex.m in Sources */,
 				A35AE92516ED432800288C41 /* unisexCell.m in Sources */,
-				A3FA0AFB16F00C06009C96C8 /* drawline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

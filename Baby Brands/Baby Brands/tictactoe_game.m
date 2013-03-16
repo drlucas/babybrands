@@ -8,7 +8,6 @@
 
 #import "tictactoe_game.h"
 #import "TicTacToe.h"
-#import "drawline.h"
 
 @interface tictactoe_game ()
 
@@ -34,6 +33,9 @@
     IBOutlet UILabel *drawcounter;
     IBOutlet UILabel *streakcount;
     IBOutlet UILabel *txtTitle;
+    
+    
+    IBOutlet UIImageView *trdiagwin;
 }
 
     int drawcount;
@@ -68,20 +70,36 @@
     self.navigationItem.titleView = label;
     label.text = NSLocalizedString(@"Tic Tac Toe", @"");
     [label sizeToFit];
-    
     drawcount = 0;
     youcounter = 0;
     computercount = 0;
     iconimage = 0;
     thestreak = 0;
     ttt = [ [ TicTacToe alloc ] init ];
+    trdiagwin.hidden = TRUE;
     
-    /* this works txtTitle.text =@"hi mom";
-    UIImage *testme;
-    testme = [  UIImage imageNamed:@"o.png" ];
-    [tttB1 setImage:testme forState:UIControlStateNormal];
-   */ 
     
+}
+
+- (void)showAlertView:(id)sender
+{
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                      message:@"You win!!!"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Play Again"
+                                            otherButtonTitles:nil];
+    [message show];
+    
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"Play Again"])
+    {
+        [ self resetBoard ];
+    }
+   
 }
 
 - (IBAction)clickAction:(id)sender {
@@ -124,15 +142,15 @@
         // lets see how you won!! then we can draw a line
         if( [ ttt howwon ] == 'A' )
         {
-            drawline *ttv = [[drawline alloc] initWithFrame:self.view.frame];
-            [self.view addSubview:ttv];
+           //show top left to bottom right diagonal 
+            trdiagwin.hidden = NO;
         }
         if ([ttt howwon] == 'B')
         {
-         
-           // [self drawRect];
+         //show bottom left to top right diagonal 
+           
         }
-        //    NSLog(@"The winner is player one (not the computer)!");
+    
         youcounter++;
         thestreak++;
         int percenttoreport = thestreak*10;
@@ -140,22 +158,16 @@
         // NSLog (@"just reported the streak!");
         usercounter.text = [NSString stringWithFormat:@"%i", youcounter];
         streakcount.text = [NSString stringWithFormat:@"%i", thestreak];
-      //  NSRunAlertPanel(@"Game Over", @"You win!", @"Play again", nil, nil);
-        // NSLog(@"get here?");
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                          message:@"You win!!"
-                                                         delegate:nil
-                                                cancelButtonTitle:@"Play Again"
-                                                otherButtonTitles:nil];
-        [message show];
+        [self showAlertView:(id)sender];
+       
         GKScore *scorereport = [[GKScore alloc] initWithCategory:@"Victories"];
         scorereport.value = youcounter;
         scorereport.context = 0;
         [scorereport reportScoreWithCompletionHandler:^(NSError *error) {
-            //nah}
+       
         }];
         
-        [ self resetBoard ];
+       
     }
     else if( [ ttt whoIsWinner ] == 'O' )
     {
@@ -348,15 +360,15 @@
     [ tttA1 setImage:blankImage forState:UIControlStateNormal];
     [ tttA2 setImage:blankImage forState:UIControlStateNormal];
     [ tttA3 setImage:blankImage forState:UIControlStateNormal];
-    [ tttB1 setImage:blankImage forState:UIControlStateNormal ];
+    [ tttB1 setImage:blankImage forState:UIControlStateNormal];
     [ tttB2 setImage:blankImage forState:UIControlStateNormal];
     [ tttB3 setImage:blankImage forState:UIControlStateNormal];
     [ tttC1 setImage:blankImage forState:UIControlStateNormal];
     [ tttC2 setImage:blankImage forState:UIControlStateNormal];
     [ tttC3 setImage:blankImage forState:UIControlStateNormal];
-    
     [ ttt reset ];
-    
+    trdiagwin.hidden = TRUE;
+
 }
 
 
@@ -387,4 +399,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    trdiagwin = nil;
+    [super viewDidUnload];
+}
 @end

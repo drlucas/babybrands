@@ -11,7 +11,8 @@
 #import "GameKit/GameKit.h"
 
 
-@interface tictactoe_game : ViewController 
+@interface tictactoe_game : ViewController <UIAlertViewDelegate>
+
 
 {
 @private
