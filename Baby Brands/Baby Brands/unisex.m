@@ -49,8 +49,33 @@
     self.navigationItem.titleView = label;
     label.text = NSLocalizedString(@"-Unisex Names-", @"");
     [label sizeToFit];
-    [self babyList];  //get unixsex names
+    [self pbabyList];  //get unixsex names from plist vs sql
+     //[self babyList];  //get unixsex names from sql table (takes too long to load)
     [unisextable reloadData]; //load the table
+   
+}
+
+-(NSMutableArray *) pbabyList{
+    babynames = [[NSMutableArray alloc] initWithCapacity:10];
+    //NSArray *plistbabynames = [[NSMutableArray alloc] initWithCapacity:10];
+    defaults = [NSUserDefaults standardUserDefaults];
+    countrypref = [defaults stringForKey:@"country_preference"];
+    NSString *myListPath;
+    
+    if ( [countrypref isEqualToString:@"United States"] )//usa
+    {
+       myListPath = [[NSBundle mainBundle] pathForResource:@"unisexusa" ofType:@"plist"];
+    }
+    if ( [countrypref isEqualToString:@"Canada"]) //canada
+    {
+       myListPath = [[NSBundle mainBundle] pathForResource:@"unisexcanada" ofType:@"plist"];
+    }
+    NSArray *plistbabynames = [[NSArray alloc]initWithContentsOfFile:myListPath];
+    NSSortDescriptor* nameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstname" ascending:YES];
+    plistbabynames = [plistbabynames sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]];
+    babynames = [NSMutableArray arrayWithArray:plistbabynames];
+    return babynames;
+    
     
 }
 
@@ -140,7 +165,7 @@
     cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
 }
 
-
+/*   --------- this is old tableview before I used a plist file -----------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -150,8 +175,8 @@
     nameCell.cellname.text =  babyn.firstname;
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterNoStyle];
-    
-    /*
+ */   
+    /*  ---not needed shading
      if (babyn.malecount == babyn.femalecount) {
         // shade both cells green
         nameCell.cellfemale.backgroundColor = [UIColor greenColor];
@@ -165,14 +190,18 @@
         // shade male cell blue
         nameCell.cellmale.backgroundColor = [UIColor blueColor];
     }
-    */
-    
+    *///----need the next 4 lines
+
+/*
     NSString *maleOutput = [formatter stringFromNumber:[NSNumber numberWithInt:babyn.malecount]];
     NSString *femaleOutput = [formatter stringFromNumber:[NSNumber numberWithInt:babyn.femalecount]];
     nameCell.cellmale.text = maleOutput;
     nameCell.cellfemale.text = femaleOutput;
-   /*
-    UIImage *image = [UIImage imageNamed:@"background2.jpg"];
+   */
+
+/* ---not needed shading 
+
+ UIImage *image = [UIImage imageNamed:@"background2.jpg"];
     CGFloat y = indexPath.row * 35;
     for (y; y+35 > image.size.height; y -= image.size.height);
     CGRect cropRect = CGRectMake(0, y, 320, 35);
@@ -180,10 +209,28 @@
     nameCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:imageRef]];
     */
 
-    return nameCell;
+ //   return nameCell;
     
-}
+//}
+//   --------- END this is old tableview before I used a plist file -----------------
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSString *cellIdentifier = kUnisexCellIdentifier;
+    unisexCell *nameCell = (unisexCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    NSDictionary *user = [babynames objectAtIndex:indexPath.row];
+    NSString *fname = [user objectForKey:@"firstname"];
+    NSString *mcount = [user objectForKey:@"mcount"];
+    NSString *fcount = [user objectForKey:@"fcount"];
+
+    nameCell.cellname.text =  fname;
+    nameCell.cellmale.text = mcount;
+    nameCell.cellfemale.text = fcount;
+    
+    return nameCell;
+}
 
 
 - (void)didReceiveMemoryWarning
