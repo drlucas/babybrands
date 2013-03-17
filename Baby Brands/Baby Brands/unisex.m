@@ -156,9 +156,15 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 
 {
-    return @"Name     # of Male  # of Female";
-    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+    {    return @"Name          Number of Male Births                                      Number of Female Births";
 }
+    else {
+        return @"Name     # of Male  # of Female";
+    }
+}
+
+
 
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

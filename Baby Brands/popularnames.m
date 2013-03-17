@@ -74,7 +74,12 @@
 -(void) titlebarupdate {
     label = [[UILabel alloc] initWithFrame:CGRectZero] ;
     label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont boldSystemFontOfSize:15.0];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+    {    label.font = [UIFont boldSystemFontOfSize:30.0];}
+    else {
+        label.font = [UIFont boldSystemFontOfSize:15.0];
+    }
+
     label.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = label;
     label.text = [NSString stringWithFormat:@"Top 15 Names for %@", queryyear];
@@ -181,6 +186,38 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     yearlistcontainer.frame = CGRectMake(0, 300, 320, 224);
+    [UIView commitAnimations];
+}
+
+- (IBAction)changeyear35:(id)sender {
+    //hide change year button
+    changeyearbtn.hidden = YES;
+    changeyeartext.hidden = YES;
+    switchgendertext.hidden = YES;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    yearlistcontainer.frame = CGRectMake(0, 216, 320, 224);
+    [UIView commitAnimations];
+}
+
+- (IBAction)changeyearipad:(id)sender {
+    //hide change year button
+    changeyearbtn.hidden = YES;
+    changeyeartext.hidden = YES;
+    switchgendertext.hidden = YES;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    yearlistcontainer.frame = CGRectMake(10, 700, 750, 224);
+    [UIView commitAnimations];
+}
+- (IBAction)hideipadpicker:(id)sender {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    yearlistcontainer.frame = CGRectMake(10, 990, 750, 224);
+    
+    changeyearbtn.hidden = NO;
+    changeyeartext.hidden = NO;
+    switchgendertext.hidden = NO;
     [UIView commitAnimations];
 }
 
@@ -416,7 +453,11 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 
 {
-    return @"Rank      Name         Total Births";
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+    {    return @"Rank      Name                                                                                              Total Births";}
+    else {
+        return @"Rank      Name         Total Births";
+    }
 }
 
 
