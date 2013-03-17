@@ -960,88 +960,10 @@ http://www.ontario.ca/government/ontario-open-data-terms-use
         <image name="help_and_support.ico" width="128" height="128"/>
         <image name="search.png" width="128" height="128"/>
         <image name="tic-tac-toe.png" width="297" height="297"/>
-        <image name="trdiagwin.png" width="320" height="550"/>
+        <image name="trdiagwin.png" width="16" height="16"/>
         <image name="twitter.png" width="512" height="512"/>
         <image name="welcome-ipad.jpg" width="1659" height="868"/>
     </resources>
-    <classes>
-        <class className="CPTGraphHostingView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CPTGraphHostingView.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="tweettapped:"/>
-            </relationships>
-        </class>
-        <class className="graph" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/graph.h"/>
-            <relationships>
-                <relationship kind="outlet" name="hostView" candidateClass="CPTGraphHostingView"/>
-            </relationships>
-        </class>
-        <class className="popularnames" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/popularnames.h"/>
-            <relationships>
-                <relationship kind="action" name="changesex:"/>
-                <relationship kind="action" name="changeyear35:"/>
-                <relationship kind="action" name="changeyear:"/>
-                <relationship kind="action" name="changeyearipad:"/>
-                <relationship kind="action" name="hide40picker:"/>
-                <relationship kind="action" name="hideipadpicker:"/>
-                <relationship kind="outlet" name="changeyearbtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="changeyeartext" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="datetable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="sex" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="switchgendertext" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yearlist" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="yearlistcontainer" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="search" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/search.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchtable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="support" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/support.h"/>
-        </class>
-        <class className="tictactoe_game" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/tictactoe_game.h"/>
-            <relationships>
-                <relationship kind="action" name="clickAction:"/>
-                <relationship kind="outlet" name="brdiagwin" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="computercounter" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="drawcounter" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="onecolwin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="onehrwin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="streakcount" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="threecolwin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="threehrwin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="trdiagwin" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="tttA1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttA2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttA3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttB1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttB2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttB3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttC1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttC2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tttC3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="twocolwin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="twohrwin" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="txtTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="usercounter" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="unisex" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/unisex.h"/>
-            <relationships>
-                <relationship kind="outlet" name="unisextable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

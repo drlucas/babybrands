@@ -36,6 +36,8 @@
 		A35AE92716ED434000288C41 /* unisex.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35AE92616ED433F00288C41 /* unisex.xib */; };
 		A3640C0E16F4E5FF006E4184 /* unisexcanada.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3640C0C16F4E5FF006E4184 /* unisexcanada.plist */; };
 		A3640C0F16F4E5FF006E4184 /* unisexusa.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3640C0D16F4E5FF006E4184 /* unisexusa.plist */; };
+		A3640C1416F5537A006E4184 /* icon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3640C1316F5537A006E4184 /* icon_3.png */; };
+		A3640C1616F553B7006E4184 /* icon_4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3640C1516F553B7006E4184 /* icon_4.png */; };
 		A36C082816ED586D00395146 /* E-mail-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A36C082716ED586D00395146 /* E-mail-icon.png */; };
 		A36C082A16ED59D400395146 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36C082916ED59D400395146 /* MessageUI.framework */; };
 		A379C43816E3B6CB005133EE /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A379C43716E3B6CB005133EE /* background2.jpg */; };
@@ -135,6 +137,8 @@
 		A35AE92616ED433F00288C41 /* unisex.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = unisex.xib; sourceTree = "<group>"; };
 		A3640C0C16F4E5FF006E4184 /* unisexcanada.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = unisexcanada.plist; sourceTree = "<group>"; };
 		A3640C0D16F4E5FF006E4184 /* unisexusa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = unisexusa.plist; sourceTree = "<group>"; };
+		A3640C1316F5537A006E4184 /* icon_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_3.png; sourceTree = "<group>"; };
+		A3640C1516F553B7006E4184 /* icon_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_4.png; sourceTree = "<group>"; };
 		A36C082716ED586D00395146 /* E-mail-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "E-mail-icon.png"; sourceTree = "<group>"; };
 		A36C082916ED59D400395146 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A379C43716E3B6CB005133EE /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
@@ -263,6 +267,8 @@
 		A3E9DD4916E28D2600F5E3CF = {
 			isa = PBXGroup;
 			children = (
+				A3640C1516F553B7006E4184 /* icon_4.png */,
+				A3640C1316F5537A006E4184 /* icon_3.png */,
 				A3B0CDB616E42BF9001EF5B4 /* CorePlot-CocoaTouch.xcodeproj */,
 				A3E9DD5B16E28D2600F5E3CF /* Baby Brands */,
 				A3E9DD5416E28D2600F5E3CF /* Frameworks */,
@@ -540,6 +546,8 @@
 				A3FA0B1116F47972009C96C8 /* brdiagwin.png in Resources */,
 				A3640C0E16F4E5FF006E4184 /* unisexcanada.plist in Resources */,
 				A3640C0F16F4E5FF006E4184 /* unisexusa.plist in Resources */,
+				A3640C1416F5537A006E4184 /* icon_3.png in Resources */,
+				A3640C1616F553B7006E4184 /* icon_4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

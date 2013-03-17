@@ -7,8 +7,9 @@
 //
 
 #import "support.h"
-#import "GameKit/GameKit.h"
-#import <MessageUI/MessageUI.h>
+#import "GameKit/GameKit.h" // for game center integration
+#import <MessageUI/MessageUI.h>  //for email support
+#import <QuartzCore/QuartzCore.h> // for scrolling text
 
 
 @interface support ()
